@@ -892,7 +892,7 @@
         }
 
         /* ==============================
-           MODALE
+           MODALE DE PAIEMENT
         ============================== */
 
         .modal {
@@ -994,14 +994,14 @@
         }
 
         /* ==============================
-           OFFRE FIXE EN HAUT
+           OFFRE FIXE EN BAS À GAUCHE
         ============================== */
 
         .top-offer {
             position: fixed;
 
-            top: 20px;
-            right: 20px;
+            bottom: 20px;
+            left: 20px;
 
             z-index: 9998;
 
@@ -1240,11 +1240,13 @@
                 font-size: 18px;
             }
 
-            /* OFFRE MOBILE */
+            /* ==============================
+               OFFRE FIXE MOBILE
+            ============================== */
 
             .top-offer {
-                top: 10px;
-                right: 10px;
+                bottom: 12px;
+                left: 12px;
 
                 width: 220px;
 
@@ -1279,7 +1281,7 @@
 
 
 <!-- =========================================
-     OFFRE RAPIDE EN HAUT DE LA PAGE
+     OFFRE RAPIDE EN BAS À GAUCHE
 ========================================= -->
 
 <div class="top-offer">
@@ -1370,12 +1372,15 @@
         </p>
 
 
-        <!-- VIDEO YOUTUBE -->
+        <!-- =====================================
+             NOUVELLE VIDÉO YOUTUBE
+             https://youtu.be/jtsEn7X16pc
+        ====================================== -->
 
         <div class="main-video">
 
             <iframe
-                src="https://www.youtube.com/embed/9gYeqmM6FE4"
+                src="https://www.youtube.com/embed/jtsEn7X16pc"
                 title="BINANCE BOOSTER™"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -2114,7 +2119,7 @@
 
 
 <!-- =========================================
-     FENÊTRE DE L'OFFRE
+     FENÊTRE DE PAIEMENT
 ========================================= -->
 
 <div
@@ -2199,6 +2204,7 @@
 
     }
 
+
     function closeModal() {
 
         document
@@ -2207,6 +2213,7 @@
             .remove("active");
 
     }
+
 
     function closeOutside(event) {
 
@@ -2219,6 +2226,7 @@
         }
 
     }
+
 
     document.addEventListener(
         "keydown",
