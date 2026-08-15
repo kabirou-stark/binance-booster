@@ -4,40 +4,54 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Binance Booster™ | Formation</title>
+    <title>Binance Booster™ | Formation Premium</title>
 
     <meta
         name="description"
-        content="Binance Booster™ — Découvrez une méthode structurée pour développer vos compétences avec Binance depuis l'Afrique."
+        content="Binance Booster™ — Une formation structurée pour apprendre à utiliser Binance depuis son téléphone."
+    >
+
+    <!-- POLICES PREMIUM -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap"
+        rel="stylesheet"
     >
 
     <style>
 
         /* =====================================================
-           VARIABLES
+           VARIABLES PREMIUM
         ===================================================== */
 
         :root {
-            --gold: #f3ba00;
-            --gold-dark: #c99500;
-            --gold-light: #fff5cc;
 
-            --black: #111111;
-            --dark: #181818;
+            --gold: #d4a017;
+            --gold-light: #f4d06f;
+            --gold-dark: #9b7208;
+            --gold-deep: #765500;
+
+            --black: #0b0b0b;
+            --black-2: #121212;
+            --black-3: #1b1b1b;
 
             --white: #ffffff;
+            --cream: #fffdf7;
+            --cream-2: #faf6e9;
 
-            --gray: #666666;
-            --light-gray: #f7f7f7;
+            --text: #171717;
+            --text-light: #686868;
 
-            --cream: #fffdf5;
+            --border: rgba(180, 135, 20, 0.25);
 
-            --border: #eee2b8;
+            --shadow:
+                0 20px 60px rgba(0, 0, 0, 0.08);
+
+            --radius: 20px;
         }
 
 
@@ -58,27 +72,31 @@
 
 
         body {
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
+
+            font-family: "Inter", sans-serif;
 
             background: var(--white);
 
-            color: var(--black);
+            color: var(--text);
 
-            line-height: 1.6;
+            line-height: 1.65;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
         }
 
 
         img {
-            max-width: 100%;
+            width: 100%;
             display: block;
         }
 
 
-        button,
-        a {
+        button {
             font-family: inherit;
         }
 
@@ -91,54 +109,60 @@
 
             width: 100%;
 
-            max-width: 1120px;
+            max-width: 1150px;
 
             margin: auto;
 
-            padding-left: 20px;
-            padding-right: 20px;
+            padding:
+                0 20px;
         }
 
 
         /* =====================================================
-           BOUTONS
+           HEADER
         ===================================================== */
 
-        .btn {
+        header {
 
-            display: inline-block;
+            position: absolute;
 
-            padding: 17px 32px;
+            top: 0;
+            left: 0;
 
-            background: var(--gold);
+            width: 100%;
 
-            color: #111111;
+            z-index: 20;
 
-            border: none;
-
-            border-radius: 12px;
-
-            font-size: 17px;
-
-            font-weight: 800;
-
-            text-decoration: none;
-
-            cursor: pointer;
-
-            transition: all .25s ease;
-
-            box-shadow:
-                0 10px 30px
-                rgba(243, 186, 0, .20);
+            padding: 25px 0;
         }
 
 
-        .btn:hover {
+        .header-content {
 
-            transform: translateY(-3px);
+            display: flex;
 
-            background: #dfa900;
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .logo {
+
+            font-family: "Montserrat", sans-serif;
+
+            color: var(--white);
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+        }
+
+
+        .logo span {
+            color: var(--gold-light);
         }
 
 
@@ -148,116 +172,202 @@
 
         .hero {
 
+            position: relative;
+
             min-height: 100vh;
 
             padding:
-                75px
-                20px
-                100px;
+                145px 20px
+                90px;
 
             display: flex;
 
-            align-items: center;
-
             justify-content: center;
+
+            align-items: center;
 
             text-align: center;
 
+            color: var(--white);
+
             background:
+
                 radial-gradient(
-                    circle at top,
-                    #fff4c7 0%,
-                    #ffffff 55%
+                    circle at 50% 0%,
+                    rgba(212,160,23,.20),
+                    transparent 42%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #080808,
+                    #15120a,
+                    #080808
+                );
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(212,160,23,.05),
+                    transparent
                 );
         }
 
 
         .hero-content {
 
+            position: relative;
+
+            z-index: 2;
+
             width: 100%;
 
-            max-width: 1050px;
+            max-width: 1000px;
 
             margin: auto;
         }
 
 
-        .brand {
+        .premium-badge {
 
-            display: inline-block;
+            display: inline-flex;
 
-            margin-bottom: 25px;
+            align-items: center;
+
+            gap: 8px;
 
             padding:
-                9px
-                18px;
+                10px 20px;
+
+            margin-bottom: 28px;
+
+            border:
+                1px solid
+                rgba(244,208,111,.45);
 
             border-radius: 50px;
 
-            background: var(--gold-light);
+            background:
+                rgba(212,160,23,.10);
 
-            color: var(--gold-dark);
+            color:
+                var(--gold-light);
 
-            font-size: 14px;
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           NOUVELLE PHRASE DU DÉBUT
+        ===================================================== */
+
+        .starting-price {
+
+            margin-bottom: 18px;
+
+            color: var(--gold-light);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 18px;
 
             font-weight: 900;
 
-            letter-spacing: .5px;
+            letter-spacing: .4px;
         }
 
 
         .hero h1 {
 
-            max-width: 950px;
+            margin-bottom: 18px;
 
-            margin:
-                0
-                auto
-                25px;
+            font-family: "Montserrat", sans-serif;
 
-            font-size: 58px;
+            font-size: clamp(
+                42px,
+                7vw,
+                76px
+            );
 
-            line-height: 1.08;
+            line-height: 1.02;
 
             font-weight: 900;
+
+            letter-spacing: -2px;
         }
 
 
-        .hero h1 span {
+        .hero h1 .gold {
 
-            color: var(--gold-dark);
+            display: block;
+
+            margin-top: 8px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8df8a,
+                    #d4a017,
+                    #f8df8a
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
         }
 
 
-        .hero-description {
-
-            max-width: 800px;
+        .hero-subtitle {
 
             margin:
-                0
-                auto
-                25px;
+                0 auto
+                30px;
 
-            color: #555555;
+            max-width: 750px;
 
-            font-size: 20px;
+            color: #d2d2d2;
 
-            line-height: 1.7;
+            font-size: 19px;
+
+            font-weight: 500;
         }
 
 
         .audio-note {
 
-            margin-bottom: 20px;
+            margin-bottom: 18px;
 
-            font-weight: 700;
+            color: #dddddd;
 
-            color: #333333;
+            font-size: 14px;
+
+            font-weight: 600;
         }
 
 
         /* =====================================================
-           VIDÉO PRINCIPALE
+           VIDÉO
         ===================================================== */
 
         .main-video {
@@ -266,38 +376,31 @@
 
             max-width: 850px;
 
-            min-height: 450px;
+            min-height: 460px;
 
             margin:
-                0
-                auto
+                0 auto
                 35px;
-
-            background: #0b0b0b;
-
-            border-radius: 22px;
 
             overflow: hidden;
 
+            border:
+                1px solid
+                rgba(212,160,23,.35);
+
+            border-radius: 22px;
+
+            background: #050505;
+
             box-shadow:
-                0 20px 60px
-                rgba(0,0,0,.18);
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
+                0 30px 80px
+                rgba(0,0,0,.45);
         }
 
 
         .video-placeholder {
 
-            width: 100%;
-
-            min-height: 450px;
-
-            padding: 40px;
+            min-height: 460px;
 
             display: flex;
 
@@ -307,17 +410,38 @@
 
             justify-content: center;
 
-            color: #ffffff;
+            padding: 30px;
 
-            text-align: center;
+            color: white;
         }
 
 
-        .video-placeholder .play {
+        .play {
 
-            font-size: 70px;
+            width: 82px;
 
-            margin-bottom: 15px;
+            height: 82px;
+
+            margin-bottom: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border:
+                1px solid
+                rgba(244,208,111,.5);
+
+            border-radius: 50%;
+
+            background:
+                rgba(212,160,23,.12);
+
+            color: var(--gold-light);
+
+            font-size: 34px;
         }
 
 
@@ -325,13 +449,73 @@
 
             margin-bottom: 8px;
 
-            font-size: 25px;
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 24px;
         }
 
 
         .video-placeholder p {
 
-            color: #cccccc;
+            color: #999999;
+        }
+
+
+        /* =====================================================
+           BOUTON PREMIUM
+        ===================================================== */
+
+        .btn {
+
+            display: inline-flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            min-height: 58px;
+
+            padding:
+                0 32px;
+
+            border:
+                1px solid
+                #e5bb3b;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f1cf62,
+                    #c99a19
+                );
+
+            color: #111111;
+
+            font-size: 16px;
+
+            font-weight: 900;
+
+            box-shadow:
+                0 12px 35px
+                rgba(212,160,23,.20);
+
+            transition:
+                .25s ease;
+
+            cursor: pointer;
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 18px 45px
+                rgba(212,160,23,.30);
         }
 
 
@@ -342,10 +526,14 @@
         .proof-section {
 
             padding:
-                100px
-                0;
+                100px 0;
 
-            background: var(--cream);
+            background:
+                linear-gradient(
+                    180deg,
+                    #fffdf7,
+                    #f9f3df
+                );
 
             text-align: center;
         }
@@ -359,31 +547,58 @@
 
             color: var(--gold-dark);
 
-            font-size: 14px;
+            font-size: 13px;
 
             font-weight: 900;
 
-            letter-spacing: .5px;
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
         }
 
 
-        .proof-title {
+        .section-title {
 
-            max-width: 900px;
+            margin-bottom: 20px;
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: clamp(
+                32px,
+                5vw,
+                48px
+            );
+
+            line-height: 1.12;
+
+            font-weight: 900;
+
+            letter-spacing: -1px;
+        }
+
+
+        .section-title .gold {
+
+            color: var(--gold-dark);
+        }
+
+
+        .section-description {
+
+            max-width: 750px;
 
             margin:
-                0
-                auto
+                0 auto
                 50px;
 
-            font-size: 45px;
+            color: var(--text-light);
 
-            line-height: 1.15;
+            font-size: 17px;
         }
 
 
         /* =====================================================
-           GRILLE DES 12 IMAGES
+           12 IMAGES
         ===================================================== */
 
         .proof-grid {
@@ -395,17 +610,15 @@
 
             gap: 22px;
 
-            align-items: stretch;
+            text-align: left;
         }
 
 
-        .proof-image {
+        .proof-card {
 
-            width: 100%;
+            padding: 10px;
 
-            min-height: 310px;
-
-            padding: 12px;
+            min-height: 315px;
 
             background: #ffffff;
 
@@ -415,25 +628,23 @@
 
             border-radius: 18px;
 
-            overflow: hidden;
-
             box-shadow:
-                0 10px 30px
-                rgba(0,0,0,.06);
+                0 12px 35px
+                rgba(80,60,0,.07);
 
             transition:
-                transform .25s ease,
-                box-shadow .25s ease;
+                .25s ease;
         }
 
 
-        .proof-image:hover {
+        .proof-card:hover {
 
-            transform: translateY(-4px);
+            transform:
+                translateY(-5px);
 
             box-shadow:
-                0 18px 40px
-                rgba(0,0,0,.10);
+                0 20px 45px
+                rgba(80,60,0,.12);
         }
 
 
@@ -441,43 +652,46 @@
 
             width: 100%;
 
-            height: 285px;
+            height: 293px;
 
             display: flex;
 
             flex-direction: column;
 
-            align-items: center;
-
             justify-content: center;
+
+            align-items: center;
 
             text-align: center;
 
-            background: var(--light-gray);
-
             border-radius: 12px;
 
-            color: #777777;
+            background:
+                linear-gradient(
+                    145deg,
+                    #f8f8f8,
+                    #eeeae0
+                );
 
-            padding: 20px;
+            color: #777777;
         }
 
 
         .proof-placeholder strong {
 
-            display: block;
+            margin-bottom: 7px;
 
-            margin-bottom: 8px;
+            color: #292929;
 
-            color: #222222;
+            font-family: "Montserrat", sans-serif;
 
-            font-size: 18px;
+            font-size: 17px;
         }
 
 
         .proof-placeholder span {
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
 
@@ -488,53 +702,13 @@
         .testimonials {
 
             padding:
-                100px
-                0;
+                105px 0;
 
             background: #ffffff;
 
             text-align: center;
         }
 
-
-        .testimonials-header {
-
-            max-width: 800px;
-
-            margin:
-                0
-                auto
-                55px;
-        }
-
-
-        .section-title {
-
-            margin-bottom: 20px;
-
-            font-size: 45px;
-
-            line-height: 1.15;
-        }
-
-
-        .section-text {
-
-            max-width: 750px;
-
-            margin:
-                0
-                auto;
-
-            color: var(--gray);
-
-            font-size: 18px;
-        }
-
-
-        /* =====================================================
-           GRILLE DES 6 TÉMOIGNAGES
-        ===================================================== */
 
         .testimonials-grid {
 
@@ -544,50 +718,64 @@
                 repeat(2, 1fr);
 
             gap: 25px;
+
+            text-align: left;
         }
 
 
         .testimonial-card {
 
-            padding: 28px;
+            position: relative;
 
-            background: #ffffff;
+            padding: 30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #fffdf7
+                );
 
             border:
                 1px solid
-                #eeeeee;
+                var(--border);
 
             border-radius: 20px;
 
-            text-align: left;
-
             box-shadow:
-                0 12px 35px
-                rgba(0,0,0,.07);
+                var(--shadow);
 
             transition:
-                transform .25s ease;
+                .25s ease;
         }
 
 
         .testimonial-card:hover {
 
-            transform: translateY(-4px);
+            transform:
+                translateY(-4px);
+        }
+
+
+        .testimonial-top {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 18px;
         }
 
 
         .testimonial-photo {
 
-            width: 75px;
+            width: 65px;
 
-            height: 75px;
+            height: 65px;
 
-            margin-bottom: 18px;
-
-            border-radius: 50%;
-
-            background:
-                var(--gold-light);
+            flex-shrink: 0;
 
             display: flex;
 
@@ -597,41 +785,44 @@
 
             overflow: hidden;
 
-            font-size: 32px;
+            border:
+                2px solid
+                var(--gold);
+
+            border-radius: 50%;
+
+            background:
+                var(--cream-2);
+
+            font-size: 26px;
         }
 
 
-        .testimonial-photo img {
+        .testimonial-name {
 
-            width: 100%;
+            font-family: "Montserrat", sans-serif;
 
-            height: 100%;
+            font-size: 17px;
 
-            object-fit: cover;
-        }
-
-
-        .testimonial-card h3 {
-
-            margin-bottom: 5px;
-
-            font-size: 19px;
+            font-weight: 800;
         }
 
 
         .stars {
 
-            margin-bottom: 15px;
+            margin-top: 3px;
 
             color: var(--gold-dark);
 
-            font-size: 18px;
+            font-size: 16px;
+
+            letter-spacing: 2px;
         }
 
 
         .testimonial-card p {
 
-            color: var(--gray);
+            color: var(--text-light);
 
             font-size: 15px;
         }
@@ -641,26 +832,27 @@
            COMMENT ÇA MARCHE
         ===================================================== */
 
-        .how-it-works {
+        .how {
 
             padding:
-                100px
-                0;
+                105px 0;
 
-            background: var(--cream);
+            background:
+                var(--black);
+
+            color: white;
         }
 
 
-        .how-header {
+        .how .section-title {
 
-            max-width: 850px;
+            color: white;
+        }
 
-            margin:
-                0
-                auto
-                60px;
 
-            text-align: center;
+        .how .section-description {
+
+            color: #a9a9a9;
         }
 
 
@@ -671,47 +863,57 @@
             grid-template-columns:
                 repeat(2, 1fr);
 
-            gap: 25px;
+            gap: 22px;
         }
 
 
         .step {
 
-            padding: 35px;
-
-            background: #ffffff;
+            padding: 32px;
 
             border:
                 1px solid
-                var(--border);
+                rgba(212,160,23,.22);
 
             border-radius: 20px;
 
+            background:
+                linear-gradient(
+                    145deg,
+                    #171717,
+                    #101010
+                );
+
             box-shadow:
-                0 10px 30px
-                rgba(0,0,0,.05);
+                0 15px 45px
+                rgba(0,0,0,.25);
         }
 
 
         .step-number {
 
-            width: 50px;
-
-            height: 50px;
-
-            margin-bottom: 18px;
-
             display: inline-flex;
+
+            width: 48px;
+
+            height: 48px;
 
             align-items: center;
 
             justify-content: center;
 
-            background: var(--gold);
-
-            color: #111111;
+            margin-bottom: 18px;
 
             border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f2d06b,
+                    #b9850d
+                );
+
+            color: #111111;
 
             font-weight: 900;
         }
@@ -721,25 +923,19 @@
 
             margin-bottom: 12px;
 
-            font-size: 22px;
-        }
+            font-family: "Montserrat", sans-serif;
 
+            color: #ffffff;
 
-        .step h3 small {
-
-            font-size: 14px;
-
-            color: #777777;
-
-            font-weight: 600;
+            font-size: 21px;
         }
 
 
         .step p {
 
-            color: var(--gray);
+            color: #aaa;
 
-            font-size: 16px;
+            font-size: 15px;
         }
 
 
@@ -748,35 +944,43 @@
             max-width: 850px;
 
             margin:
-                55px
-                auto
+                50px auto
                 0;
 
             padding: 35px;
 
-            background: var(--black);
+            border:
+                1px solid
+                rgba(212,160,23,.30);
 
-            color: #ffffff;
+            border-radius: 20px;
 
-            border-radius: 22px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #19150a,
+                    #111111
+                );
 
             text-align: center;
         }
 
 
-        .final-message h2 {
+        .final-message h3 {
 
-            font-size: 27px;
+            margin-bottom: 12px;
+
+            color: var(--gold-light);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 24px;
         }
 
 
         .final-message p {
 
-            margin-top: 15px;
-
-            color: #dddddd;
-
-            font-size: 18px;
+            color: #c4c4c4;
         }
 
 
@@ -787,12 +991,14 @@
         .offer {
 
             padding:
-                100px
-                20px;
+                110px 20px;
 
-            background: var(--dark);
-
-            color: #ffffff;
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff7d9,
+                    #ffffff
+                );
 
             text-align: center;
         }
@@ -803,6 +1009,21 @@
             max-width: 850px;
 
             margin: auto;
+
+            padding:
+                55px 30px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 25px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 25px 70px
+                rgba(90,70,0,.10);
         }
 
 
@@ -810,43 +1031,57 @@
 
             margin-bottom: 15px;
 
-            color: var(--gold);
+            color: var(--gold-dark);
 
-            font-size: 15px;
+            font-size: 13px;
 
             font-weight: 900;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
         }
 
 
         .offer h2 {
 
-            margin-bottom: 25px;
+            margin-bottom: 20px;
 
-            font-size: 45px;
+            font-family: "Montserrat", sans-serif;
 
-            line-height: 1.2;
+            font-size: clamp(
+                30px,
+                5vw,
+                45px
+            );
+
+            line-height: 1.15;
+
+            font-weight: 900;
         }
 
 
-        .price-old {
-
-            margin-bottom: 5px;
+        .old-price {
 
             color: #999999;
 
-            font-size: 22px;
+            font-size: 20px;
 
             text-decoration: line-through;
         }
 
 
-        .price {
+        .new-price {
 
-            margin-bottom: 30px;
+            margin:
+                5px 0
+                25px;
 
-            color: var(--gold);
+            color: var(--gold-dark);
 
-            font-size: 60px;
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 62px;
 
             line-height: 1;
 
@@ -854,23 +1089,22 @@
         }
 
 
-        .offer-note {
+        .offer-description {
 
-            max-width: 680px;
+            max-width: 650px;
 
             margin:
-                0
-                auto
-                30px;
+                0 auto
+                28px;
 
-            color: #bbbbbb;
+            color: var(--text-light);
 
             font-size: 14px;
         }
 
 
         /* =====================================================
-           MODAL / POP-UP
+           MODAL
         ===================================================== */
 
         .modal {
@@ -890,7 +1124,7 @@
             padding: 20px;
 
             background:
-                rgba(0,0,0,.78);
+                rgba(0,0,0,.82);
         }
 
 
@@ -900,48 +1134,40 @@
         }
 
 
-        .modal-content {
+        .modal-box {
 
             position: relative;
 
             width: 100%;
 
-            max-width: 500px;
+            max-width: 510px;
 
-            padding: 40px 30px;
+            padding: 45px 30px;
 
-            background: #ffffff;
+            border:
+                1px solid
+                rgba(212,160,23,.40);
 
-            color: #111111;
+            border-radius: 24px;
 
-            border-radius: 22px;
+            background:
+                linear-gradient(
+                    145deg,
+                    #171717,
+                    #0b0b0b
+                );
+
+            color: white;
 
             text-align: center;
 
             box-shadow:
-                0 25px 80px
-                rgba(0,0,0,.35);
-
-            animation:
-                modalOpen .25s ease;
+                0 30px 100px
+                rgba(0,0,0,.55);
         }
 
 
-        @keyframes modalOpen {
-
-            from {
-                opacity: 0;
-                transform: scale(.92);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-
-        .close-modal {
+        .close {
 
             position: absolute;
 
@@ -953,7 +1179,7 @@
 
             background: transparent;
 
-            color: #555555;
+            color: #aaa;
 
             font-size: 30px;
 
@@ -961,48 +1187,53 @@
         }
 
 
-        .modal-content h2 {
+        .modal-box h2 {
 
             margin-bottom: 15px;
 
-            font-size: 28px;
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 29px;
         }
 
 
-        .modal-old-price {
+        .modal-old {
 
-            color: #888888;
-
-            font-size: 18px;
+            color: #888;
 
             text-decoration: line-through;
+
+            font-size: 18px;
         }
 
 
         .modal-price {
 
             margin:
-                5px
-                0
+                6px 0
                 20px;
 
-            color: var(--gold-dark);
+            color: var(--gold-light);
 
-            font-size: 45px;
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 48px;
 
             font-weight: 900;
         }
 
 
-        .modal-content p {
+        .modal-box p {
 
             margin-bottom: 25px;
 
-            color: var(--gray);
+            color: #aaa;
+
+            font-size: 15px;
         }
 
 
-        .modal-btn {
+        .modal-box .btn {
 
             width: 100%;
         }
@@ -1015,46 +1246,25 @@
         footer {
 
             padding:
-                25px
-                20px;
+                25px 20px;
 
-            background: #080808;
+            background: #050505;
 
-            color: #888888;
+            color: #777777;
 
             text-align: center;
 
-            font-size: 13px;
+            font-size: 12px;
         }
 
 
         /* =====================================================
-           RESPONSIVE TABLET
+           TABLET
         ===================================================== */
 
         @media (max-width: 850px) {
 
-            .hero h1 {
-
-                font-size: 44px;
-            }
-
-
-            .section-title,
-            .proof-title {
-
-                font-size: 36px;
-            }
-
-
             .proof-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .testimonials-grid {
 
                 grid-template-columns:
                     repeat(2, 1fr);
@@ -1065,28 +1275,13 @@
 
                 grid-template-columns:
                     1fr;
-
-                max-width: 700px;
-
-                margin: auto;
             }
 
-
-            .offer h2 {
-
-                font-size: 36px;
-            }
-
-
-            .price {
-
-                font-size: 50px;
-            }
         }
 
 
         /* =====================================================
-           RESPONSIVE MOBILE
+           MOBILE
         ===================================================== */
 
         @media (max-width: 600px) {
@@ -1094,29 +1289,35 @@
             .hero {
 
                 padding:
-                    55px
-                    15px
-                    75px;
+                    120px 15px
+                    70px;
             }
 
 
             .hero h1 {
 
-                font-size: 34px;
+                font-size: 40px;
+
+                letter-spacing:
+                    -1.5px;
             }
 
 
-            .hero-description {
+            .hero-subtitle {
 
-                font-size: 17px;
+                font-size: 16px;
+            }
+
+
+            .starting-price {
+
+                font-size: 16px;
             }
 
 
             .main-video {
 
                 min-height: 300px;
-
-                border-radius: 16px;
             }
 
 
@@ -1126,91 +1327,50 @@
             }
 
 
-            .section-title,
-            .proof-title {
-
-                font-size: 30px;
-            }
-
-
-            .proof-section,
-            .testimonials,
-            .how-it-works {
-
-                padding:
-                    70px
-                    0;
-            }
-
-
-            /* 12 images = 1 colonne sur téléphone */
-
             .proof-grid {
 
                 grid-template-columns:
                     1fr;
-
-                max-width: 500px;
-
-                margin-left: auto;
-
-                margin-right: auto;
             }
 
-
-            /* 6 témoignages = 1 colonne sur téléphone */
 
             .testimonials-grid {
 
                 grid-template-columns:
                     1fr;
-
-                max-width: 500px;
-
-                margin-left: auto;
-
-                margin-right: auto;
-            }
-
-
-            .proof-image {
-
-                min-height: 300px;
             }
 
 
             .proof-placeholder {
 
-                height: 275px;
+                height: 285px;
             }
 
 
-            .offer {
+            .proof-card {
+
+                min-height: 307px;
+            }
+
+
+            .offer-box {
 
                 padding:
-                    70px
-                    15px;
+                    40px 20px;
             }
 
 
-            .offer h2 {
+            .new-price {
 
-                font-size: 31px;
-            }
-
-
-            .price {
-
-                font-size: 45px;
+                font-size: 48px;
             }
 
 
             .btn {
 
                 width: 100%;
-
-                max-width: 360px;
             }
+
         }
 
     </style>
@@ -1222,6 +1382,31 @@
 
 
     <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header>
+
+        <div class="container">
+
+            <div class="header-content">
+
+                <div class="logo">
+
+                    BINANCE
+                    <span>BOOSTER™</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
          HERO
     ===================================================== -->
 
@@ -1229,8 +1414,20 @@
 
         <div class="hero-content">
 
-            <div class="brand">
-                🚀 BINANCE BOOSTER™
+
+            <div class="premium-badge">
+
+                ✦ FORMATION PREMIUM
+
+            </div>
+
+
+            <!-- NOUVELLE PHRASE -->
+
+            <div class="starting-price">
+
+                AVEC SEULEMENT 5.789 FCFA 👇
+
             </div>
 
 
@@ -1238,20 +1435,18 @@
 
                 Gagne jusqu'à
 
-                <span>
-                    150.000 F CFA / mois
-                </span>
+                <span class="gold">
 
-                avec Binance depuis ton téléphone
+                    150.000 F CFA / mois
+
+                </span>
 
             </h1>
 
 
-            <p class="hero-description">
+            <p class="hero-subtitle">
 
-                Découvre une méthode structurée pour développer
-                tes compétences et ton activité avec Binance
-                depuis l'Afrique.
+                Grâce à Binance depuis ton téléphone.
 
             </p>
 
@@ -1259,19 +1454,19 @@
             <p class="audio-note">
 
                 🔊 Appuie sur l'icône du son sur la vidéo
-                pour activer l'audio
+                pour activer l'audio.
 
             </p>
 
 
-            <!-- VIDÉO PRINCIPALE -->
+            <!-- VIDÉO -->
 
             <div class="main-video">
 
                 <div class="video-placeholder">
 
                     <div class="play">
-                        ▶️
+                        ▶
                     </div>
 
                     <h3>
@@ -1279,7 +1474,7 @@
                     </h3>
 
                     <p>
-                        Ta vidéo principale sera ajoutée ici.
+                        Ajoute ta vidéo ici.
                     </p>
 
                 </div>
@@ -1291,7 +1486,7 @@
                 href="#preuves"
                 class="btn">
 
-                Découvrir les preuves ↓
+                DÉCOUVRIR BINANCE BOOSTER ↓
 
             </a>
 
@@ -1302,7 +1497,7 @@
 
 
     <!-- =====================================================
-         12 PREUVES / IMAGES
+         PREUVES — 12 EMPLACEMENTS
     ===================================================== -->
 
     <section
@@ -1314,25 +1509,35 @@
 
             <span class="section-label">
 
-                📊 LES CHIFFRES
+                LES PREUVES
 
             </span>
 
 
-            <h2 class="proof-title">
+            <h2 class="section-title">
 
                 Les hommes mentent,
-                mais pas les chiffres 👇…
+                <span class="gold">
+                    mais pas les chiffres 👇…
+                </span>
 
             </h2>
+
+
+            <p class="section-description">
+
+                Présente ici tes véritables captures,
+                résultats ou éléments de preuve.
+
+            </p>
 
 
             <div class="proof-grid">
 
 
-                <!-- IMAGE 01 -->
+                <!-- 01 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1341,7 +1546,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1349,9 +1554,9 @@
                 </div>
 
 
-                <!-- IMAGE 02 -->
+                <!-- 02 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1360,7 +1565,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1368,9 +1573,9 @@
                 </div>
 
 
-                <!-- IMAGE 03 -->
+                <!-- 03 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1379,7 +1584,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1387,9 +1592,9 @@
                 </div>
 
 
-                <!-- IMAGE 04 -->
+                <!-- 04 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1398,7 +1603,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1406,9 +1611,9 @@
                 </div>
 
 
-                <!-- IMAGE 05 -->
+                <!-- 05 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1417,7 +1622,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1425,9 +1630,9 @@
                 </div>
 
 
-                <!-- IMAGE 06 -->
+                <!-- 06 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1436,7 +1641,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1444,9 +1649,9 @@
                 </div>
 
 
-                <!-- IMAGE 07 -->
+                <!-- 07 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1455,7 +1660,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1463,9 +1668,9 @@
                 </div>
 
 
-                <!-- IMAGE 08 -->
+                <!-- 08 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1474,7 +1679,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1482,9 +1687,9 @@
                 </div>
 
 
-                <!-- IMAGE 09 -->
+                <!-- 09 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1493,7 +1698,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1501,9 +1706,9 @@
                 </div>
 
 
-                <!-- IMAGE 10 -->
+                <!-- 10 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1512,7 +1717,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1520,9 +1725,9 @@
                 </div>
 
 
-                <!-- IMAGE 11 -->
+                <!-- 11 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1531,7 +1736,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1539,9 +1744,9 @@
                 </div>
 
 
-                <!-- IMAGE 12 -->
+                <!-- 12 -->
 
-                <div class="proof-image">
+                <div class="proof-card">
 
                     <div class="proof-placeholder">
 
@@ -1550,7 +1755,7 @@
                         </strong>
 
                         <span>
-                            Ajoute ton image Binance ici
+                            Ajoute ton image ici
                         </span>
 
                     </div>
@@ -1566,7 +1771,7 @@
 
 
     <!-- =====================================================
-         6 TÉMOIGNAGES
+         TÉMOIGNAGES — 6
     ===================================================== -->
 
     <section class="testimonials">
@@ -1574,175 +1779,224 @@
         <div class="container">
 
 
-            <div class="testimonials-header">
+            <span class="section-label">
 
-                <span class="section-label">
+                ⭐ TÉMOIGNAGES
 
-                    ⭐ TÉMOIGNAGES
-
-                </span>
+            </span>
 
 
-                <h2 class="section-title">
+            <h2 class="section-title">
 
-                    Voici ce que pensent les élèves
-                    de cette formation…
+                Voici ce que pensent les élèves
+                de cette formation
 
-                </h2>
+            </h2>
 
 
-                <p class="section-text">
+            <p class="section-description">
 
-                    Découvre les retours et expériences
-                    des participants.
+                Ajoute ici les vrais témoignages de tes élèves.
 
-                </p>
-
-            </div>
+            </p>
 
 
             <div class="testimonials-grid">
 
 
-                <!-- TÉMOIGNAGE 01 -->
+                <!-- 01 -->
 
                 <div class="testimonial-card">
 
-                    <div class="testimonial-photo">
-                        👤
+                    <div class="testimonial-top">
+
+                        <div class="testimonial-photo">
+                            👤
+                        </div>
+
+                        <div>
+
+                            <div class="testimonial-name">
+                                Élève 01
+                            </div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Élève 01
-                    </h3>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
 
                     <p>
                         Ajoute ici le témoignage réel
-                        du premier élève.
+                        de ton premier élève.
                     </p>
 
                 </div>
 
 
-                <!-- TÉMOIGNAGE 02 -->
+                <!-- 02 -->
 
                 <div class="testimonial-card">
 
-                    <div class="testimonial-photo">
-                        👤
+                    <div class="testimonial-top">
+
+                        <div class="testimonial-photo">
+                            👤
+                        </div>
+
+                        <div>
+
+                            <div class="testimonial-name">
+                                Élève 02
+                            </div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Élève 02
-                    </h3>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
 
                     <p>
                         Ajoute ici le témoignage réel
-                        du deuxième élève.
+                        de ton deuxième élève.
                     </p>
 
                 </div>
 
 
-                <!-- TÉMOIGNAGE 03 -->
+                <!-- 03 -->
 
                 <div class="testimonial-card">
 
-                    <div class="testimonial-photo">
-                        👤
+                    <div class="testimonial-top">
+
+                        <div class="testimonial-photo">
+                            👤
+                        </div>
+
+                        <div>
+
+                            <div class="testimonial-name">
+                                Élève 03
+                            </div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Élève 03
-                    </h3>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
 
                     <p>
                         Ajoute ici le témoignage réel
-                        du troisième élève.
+                        de ton troisième élève.
                     </p>
 
                 </div>
 
 
-                <!-- TÉMOIGNAGE 04 -->
+                <!-- 04 -->
 
                 <div class="testimonial-card">
 
-                    <div class="testimonial-photo">
-                        👤
+                    <div class="testimonial-top">
+
+                        <div class="testimonial-photo">
+                            👤
+                        </div>
+
+                        <div>
+
+                            <div class="testimonial-name">
+                                Élève 04
+                            </div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Élève 04
-                    </h3>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
 
                     <p>
                         Ajoute ici le témoignage réel
-                        du quatrième élève.
+                        de ton quatrième élève.
                     </p>
 
                 </div>
 
 
-                <!-- TÉMOIGNAGE 05 -->
+                <!-- 05 -->
 
                 <div class="testimonial-card">
 
-                    <div class="testimonial-photo">
-                        👤
+                    <div class="testimonial-top">
+
+                        <div class="testimonial-photo">
+                            👤
+                        </div>
+
+                        <div>
+
+                            <div class="testimonial-name">
+                                Élève 05
+                            </div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Élève 05
-                    </h3>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
 
                     <p>
                         Ajoute ici le témoignage réel
-                        du cinquième élève.
+                        de ton cinquième élève.
                     </p>
 
                 </div>
 
 
-                <!-- TÉMOIGNAGE 06 -->
+                <!-- 06 -->
 
                 <div class="testimonial-card">
 
-                    <div class="testimonial-photo">
-                        👤
+                    <div class="testimonial-top">
+
+                        <div class="testimonial-photo">
+                            👤
+                        </div>
+
+                        <div>
+
+                            <div class="testimonial-name">
+                                Élève 06
+                            </div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Élève 06
-                    </h3>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
 
                     <p>
                         Ajoute ici le témoignage réel
-                        du sixième élève.
+                        de ton sixième élève.
                     </p>
 
                 </div>
@@ -1759,36 +2013,33 @@
          COMMENT ÇA MARCHE
     ===================================================== -->
 
-    <section class="how-it-works">
+    <section class="how">
 
         <div class="container">
 
 
-            <div class="how-header">
+            <span class="section-label">
 
-                <span class="section-label">
+                BINANCE BOOSTER™
 
-                    🚀 BINANCE BOOSTER™
-
-                </span>
+            </span>
 
 
-                <h2 class="section-title">
+            <h2 class="section-title">
 
-                    VOICI COMMENT ÇA MARCHE
-                    AVEC BINANCE BOOSTER
+                VOICI COMMENT ÇA MARCHE
+                AVEC BINANCE BOOSTER
 
-                </h2>
+            </h2>
 
 
-                <p class="section-text">
+            <p class="section-description">
 
-                    Une méthode progressive conçue pour
-                    t'accompagner étape par étape.
+                Une méthode progressive pour apprendre,
+                pratiquer et mieux gérer son utilisation
+                de Binance.
 
-                </p>
-
-            </div>
+            </p>
 
 
             <div class="steps">
@@ -1798,21 +2049,16 @@
 
                 <div class="step">
 
-                    <span class="step-number">
+                    <div class="step-number">
                         01
-                    </span>
-
+                    </div>
 
                     <h3>
-
                         Découvre Binance
-
                         <small>
-                            (zéro expérience requise)
+                            — zéro expérience requise
                         </small>
-
                     </h3>
-
 
                     <p>
 
@@ -1834,18 +2080,13 @@
 
                 <div class="step">
 
-                    <span class="step-number">
+                    <div class="step-number">
                         02
-                    </span>
-
+                    </div>
 
                     <h3>
-
-                        Mets en place tes
-                        premières stratégies
-
+                        Mets en place tes premières stratégies
                     </h3>
-
 
                     <p>
 
@@ -1866,18 +2107,13 @@
 
                 <div class="step">
 
-                    <span class="step-number">
+                    <div class="step-number">
                         03
-                    </span>
-
+                    </div>
 
                     <h3>
-
-                        Découvre les fonctions
-                        avancées de Binance
-
+                        Découvre les fonctions avancées de Binance
                     </h3>
-
 
                     <p>
 
@@ -1895,18 +2131,13 @@
 
                 <div class="step">
 
-                    <span class="step-number">
+                    <div class="step-number">
                         04
-                    </span>
-
+                    </div>
 
                     <h3>
-
-                        Optimise et sécurise
-                        tes gains
-
+                        Optimise et sécurise tes gains
                     </h3>
-
 
                     <p>
 
@@ -1927,18 +2158,13 @@
 
                 <div class="step">
 
-                    <span class="step-number">
+                    <div class="step-number">
                         05
-                    </span>
-
+                    </div>
 
                     <h3>
-
-                        Répète et fais évoluer
-                        tes résultats
-
+                        Répète et fais évoluer tes résultats
                     </h3>
-
 
                     <p>
 
@@ -1958,13 +2184,9 @@
 
             <div class="final-message">
 
-                <h2>
-
-                    Binance Booster n'est pas
-                    une formation théorique.
-
-                </h2>
-
+                <h3>
+                    Binance Booster n'est pas une formation théorique.
+                </h3>
 
                 <p>
 
@@ -2006,25 +2228,29 @@
             </h2>
 
 
-            <div class="price-old">
+            <div class="old-price">
 
-                Au lieu de 107.789 FCFA
+                107.789 FCFA
 
             </div>
 
 
-            <div class="price">
+            <div class="new-price">
 
                 5.789 FCFA
 
             </div>
 
 
-            <p class="offer-note">
+            <p class="offer-description">
 
-                Offre promotionnelle. Les résultats peuvent varier
-                selon le capital, les compétences, les conditions
-                du marché et l'application de la méthode.
+                Profite de l'offre actuelle et découvre
+                le programme Binance Booster™.
+
+                Les résultats ne sont pas garantis et peuvent
+                varier selon le capital, les compétences,
+                les conditions du marché et l'application
+                de la méthode.
 
             </p>
 
@@ -2033,7 +2259,7 @@
                 class="btn"
                 onclick="openModal()">
 
-                🚀 Profiter de l'offre maintenant
+                ✦ PROFITER DE L'OFFRE MAINTENANT
 
             </button>
 
@@ -2044,20 +2270,20 @@
 
 
     <!-- =====================================================
-         POP-UP OFFRE
+         POP-UP
     ===================================================== -->
 
     <div
         class="modal"
         id="offerModal"
-        onclick="closeModalOutside(event)">
+        onclick="closeOutside(event)">
 
 
-        <div class="modal-content">
+        <div class="modal-box">
 
 
             <button
-                class="close-modal"
+                class="close"
                 onclick="closeModal()">
 
                 ×
@@ -2067,20 +2293,20 @@
 
             <div class="offer-label">
 
-                🔥 OFFRE LIMITÉE
+                OFFRE BINANCE BOOSTER™
 
             </div>
 
 
             <h2>
 
-                Profite de
-                Binance Booster™
+                Profite de l'offre
+                maintenant
 
             </h2>
 
 
-            <div class="modal-old-price">
+            <div class="modal-old">
 
                 107.789 FCFA
 
@@ -2096,25 +2322,22 @@
 
             <p>
 
-                Accède maintenant à la formation
-                et découvre le programme complet
-                Binance Booster™.
+                Accède à Binance Booster™
+                et commence ton parcours
+                de formation.
 
             </p>
 
 
-            <!--
-            IMPORTANT :
-
-            Remplace le "#" ci-dessous par ton
-            véritable lien de paiement.
-            -->
+            <!-- =================================================
+                 REMPLACE "#" PAR TON VRAI LIEN DE PAIEMENT
+            ================================================== -->
 
             <a
                 href="#"
-                class="btn modal-btn">
+                class="btn">
 
-                💳 Je profite de l'offre maintenant
+                💳 PROFITER DE L'OFFRE À 5.789 FCFA
 
             </a>
 
@@ -2143,7 +2366,6 @@
 
     <script>
 
-
         function openModal() {
 
             document
@@ -2164,7 +2386,7 @@
         }
 
 
-        function closeModalOutside(event) {
+        function closeOutside(event) {
 
             if (
                 event.target.id === "offerModal"
@@ -2191,7 +2413,6 @@
 
             }
         );
-
 
     </script>
 
