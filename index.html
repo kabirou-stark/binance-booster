@@ -1,2198 +1,1758 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>Binance Booster™</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Binance Booster™ — Formation pratique pour apprendre à utiliser Binance depuis son téléphone.">
 
-    <title>Binance Booster™ | Formation Premium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <meta
-        name="description"
-        content="Binance Booster™ — Une formation structurée pour apprendre à utiliser Binance depuis son téléphone."
-    >
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 
-    <!-- POLICES PREMIUM -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
+/* =========================================================
+   COULEURS
+========================================================= */
 
-    <style>
+:root {
+    --yellow: #D4A017;
+    --yellow-dark: #A87800;
+    --yellow-deep: #805D00;
+    --yellow-light: #F5D66F;
 
-        /* =====================================================
-           VARIABLES PREMIUM
-        ===================================================== */
+    --black: #0B0B0B;
+    --black-light: #171717;
 
-        :root {
+    --white: #FFFFFF;
+    --cream: #FFF9E8;
 
-            --gold: #d4a017;
-            --gold-light: #f4d06f;
-            --gold-dark: #9b7208;
-            --gold-deep: #765500;
+    --text: #151515;
+    --gray: #666666;
 
-            --black: #0b0b0b;
-            --black-2: #121212;
-            --black-3: #1b1b1b;
+    --border: rgba(128, 93, 0, 0.28);
+}
 
-            --white: #ffffff;
-            --cream: #fffdf7;
-            --cream-2: #faf6e9;
 
-            --text: #171717;
-            --text-light: #686868;
+/* =========================================================
+   RESET
+========================================================= */
 
-            --border: rgba(180, 135, 20, 0.25);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            --shadow:
-                0 20px 60px rgba(0, 0, 0, 0.08);
+html {
+    scroll-behavior: smooth;
+}
 
-            --radius: 20px;
-        }
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.65;
+}
 
+img {
+    width: 100%;
+    display: block;
+}
 
-        /* =====================================================
-           RESET
-        ===================================================== */
+a {
+    text-decoration: none;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
+/* =========================================================
+   CONTAINER
+========================================================= */
 
-        html {
-            scroll-behavior: smooth;
-        }
+.container {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 20px;
+}
 
 
-        body {
+/* =========================================================
+   HEADER — JAUNE FONCÉ
+========================================================= */
 
-            font-family: "Inter", sans-serif;
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 25px 0;
+}
 
-            background: var(--white);
+.logo {
+    text-align: center;
 
-            color: var(--text);
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
 
-            line-height: 1.65;
+    color: #111111;
+}
 
-            overflow-x: hidden;
-        }
+.logo span {
+    color: #FFFFFF;
+}
 
 
-        a {
-            text-decoration: none;
-        }
+/* =========================================================
+   HERO — JAUNE PUR ET FONCÉ
+========================================================= */
 
+.hero {
 
-        img {
-            width: 100%;
-            display: block;
-        }
+    min-height: 100vh;
 
+    padding:
+        130px 20px
+        80px;
 
-        button {
-            font-family: inherit;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    text-align: center;
 
-        /* =====================================================
-           CONTAINER
-        ===================================================== */
+    background:
 
-        .container {
+        radial-gradient(
+            circle at top,
+            rgba(255,255,255,0.18),
+            transparent 40%
+        ),
 
-            width: 100%;
+        linear-gradient(
+            135deg,
+            #A87800,
+            #D4A017 45%,
+            #A87800
+        );
 
-            max-width: 1150px;
+    color: #111111;
+}
 
-            margin: auto;
 
-            padding:
-                0 20px;
-        }
+.hero-content {
+    width: 100%;
+    max-width: 1000px;
+}
 
 
-        /* =====================================================
-           HEADER
-        ===================================================== */
+.badge {
 
-        header {
+    display: inline-block;
 
-            position: absolute;
+    margin-bottom: 25px;
 
-            top: 0;
-            left: 0;
+    padding:
+        10px 20px;
 
-            width: 100%;
+    border:
+        1px solid
+        rgba(0,0,0,0.25);
 
-            z-index: 20;
+    border-radius: 50px;
 
-            padding: 25px 0;
-        }
+    background:
+        rgba(255,255,255,0.16);
 
+    color: #111111;
 
-        .header-content {
+    font-size: 13px;
+    font-weight: 900;
 
-            display: flex;
+    letter-spacing: 1px;
+}
 
-            justify-content: center;
 
-            align-items: center;
-        }
+.starting-price {
 
+    margin-bottom: 15px;
 
-        .logo {
+    font-family: "Montserrat", sans-serif;
 
-            font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+    font-weight: 900;
 
-            color: var(--white);
+    color: #111111;
+}
 
-            font-size: 20px;
 
-            font-weight: 900;
+.hero h1 {
 
-            letter-spacing: 1px;
-        }
+    margin-bottom: 20px;
 
+    font-family: "Montserrat", sans-serif;
 
-        .logo span {
-            color: var(--gold-light);
-        }
+    font-size: clamp(42px, 7vw, 75px);
 
+    line-height: 1.03;
 
-        /* =====================================================
-           HERO
-        ===================================================== */
+    font-weight: 900;
 
-        .hero {
+    letter-spacing: -2px;
 
-            position: relative;
+    color: #111111;
+}
 
-            min-height: 100vh;
 
-            padding:
-                145px 20px
-                90px;
+.hero h1 span {
 
-            display: flex;
+    display: block;
 
-            justify-content: center;
+    margin-top: 8px;
 
-            align-items: center;
+    color: #FFFFFF;
 
-            text-align: center;
+    text-shadow:
+        0 3px 15px
+        rgba(0,0,0,0.18);
+}
 
-            color: var(--white);
 
-            background:
+.hero-subtitle {
 
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(212,160,23,.20),
-                    transparent 42%
-                ),
+    max-width: 700px;
 
-                linear-gradient(
-                    135deg,
-                    #080808,
-                    #15120a,
-                    #080808
-                );
-        }
+    margin:
+        0 auto 28px;
 
+    font-size: 20px;
+    font-weight: 700;
 
-        .hero::before {
+    color: #191919;
+}
 
-            content: "";
 
-            position: absolute;
+.audio-note {
 
-            inset: 0;
+    margin-bottom: 15px;
 
-            pointer-events: none;
+    font-size: 14px;
+    font-weight: 700;
+}
 
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(212,160,23,.05),
-                    transparent
-                );
-        }
 
+/* =========================================================
+   VIDEO
+========================================================= */
 
-        .hero-content {
+.main-video {
 
-            position: relative;
+    width: 100%;
+    max-width: 850px;
 
-            z-index: 2;
+    min-height: 450px;
 
-            width: 100%;
+    margin:
+        0 auto 30px;
 
-            max-width: 1000px;
+    border:
+        4px solid
+        rgba(255,255,255,0.75);
 
-            margin: auto;
-        }
+    border-radius: 20px;
 
+    overflow: hidden;
 
-        .premium-badge {
+    background: #080808;
 
-            display: inline-flex;
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.30);
+}
 
-            align-items: center;
 
-            gap: 8px;
+.video-placeholder {
 
-            padding:
-                10px 20px;
+    min-height: 450px;
 
-            margin-bottom: 28px;
+    display: flex;
 
-            border:
-                1px solid
-                rgba(244,208,111,.45);
+    flex-direction: column;
 
-            border-radius: 50px;
+    justify-content: center;
 
-            background:
-                rgba(212,160,23,.10);
+    align-items: center;
 
-            color:
-                var(--gold-light);
+    color: #FFFFFF;
+}
 
-            font-size: 13px;
 
-            font-weight: 800;
+.play {
 
-            letter-spacing: 1px;
+    width: 80px;
+    height: 80px;
 
-            text-transform: uppercase;
-        }
+    margin-bottom: 20px;
 
+    display: flex;
 
-        /* =====================================================
-           NOUVELLE PHRASE DU DÉBUT
-        ===================================================== */
+    justify-content: center;
+    align-items: center;
 
-        .starting-price {
+    border-radius: 50%;
 
-            margin-bottom: 18px;
+    background: var(--yellow);
 
-            color: var(--gold-light);
+    color: #111111;
 
-            font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+}
 
-            font-size: 18px;
 
-            font-weight: 900;
+.video-placeholder h3 {
 
-            letter-spacing: .4px;
-        }
+    margin-bottom: 5px;
 
+    font-family: "Montserrat", sans-serif;
 
-        .hero h1 {
+    font-size: 24px;
+}
 
-            margin-bottom: 18px;
 
-            font-family: "Montserrat", sans-serif;
+.video-placeholder p {
+    color: #AAAAAA;
+}
 
-            font-size: clamp(
-                42px,
-                7vw,
-                76px
-            );
 
-            line-height: 1.02;
+/* =========================================================
+   BOUTONS
+========================================================= */
 
-            font-weight: 900;
+.btn {
 
-            letter-spacing: -2px;
-        }
+    display: inline-flex;
 
+    justify-content: center;
+    align-items: center;
 
-        .hero h1 .gold {
+    min-height: 58px;
 
-            display: block;
+    padding:
+        0 32px;
 
-            margin-top: 8px;
+    border:
+        2px solid
+        #111111;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #f8df8a,
-                    #d4a017,
-                    #f8df8a
-                );
+    border-radius: 12px;
 
-            -webkit-background-clip: text;
+    background: #111111;
 
-            background-clip: text;
+    color: #FFFFFF;
 
-            color: transparent;
-        }
+    font-size: 16px;
+    font-weight: 900;
 
+    cursor: pointer;
 
-        .hero-subtitle {
+    transition: 0.25s ease;
+}
 
-            margin:
-                0 auto
-                30px;
 
-            max-width: 750px;
+.btn:hover {
 
-            color: #d2d2d2;
+    transform:
+        translateY(-3px);
 
-            font-size: 19px;
+    background: #000000;
 
-            font-weight: 500;
-        }
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,0.25);
+}
 
 
-        .audio-note {
+/* =========================================================
+   SECTION PREUVES — JAUNE
+========================================================= */
 
-            margin-bottom: 18px;
+.proof-section {
 
-            color: #dddddd;
+    padding:
+        100px 0;
 
-            font-size: 14px;
+    background:
 
-            font-weight: 600;
-        }
+        linear-gradient(
+            180deg,
+            #FFF3BF,
+            #FFFFFF
+        );
 
+    text-align: center;
+}
 
-        /* =====================================================
-           VIDÉO
-        ===================================================== */
 
-        .main-video {
+.section-label {
 
-            width: 100%;
+    display: inline-block;
 
-            max-width: 850px;
+    margin-bottom: 12px;
 
-            min-height: 460px;
+    color: var(--yellow-dark);
 
-            margin:
-                0 auto
-                35px;
+    font-size: 13px;
+    font-weight: 900;
 
-            overflow: hidden;
+    letter-spacing: 1.5px;
+}
 
-            border:
-                1px solid
-                rgba(212,160,23,.35);
 
-            border-radius: 22px;
+.section-title {
 
-            background: #050505;
+    margin-bottom: 18px;
 
-            box-shadow:
-                0 30px 80px
-                rgba(0,0,0,.45);
-        }
+    font-family: "Montserrat", sans-serif;
 
+    font-size: clamp(32px, 5vw, 48px);
 
-        .video-placeholder {
+    line-height: 1.12;
 
-            min-height: 460px;
+    font-weight: 900;
+}
 
-            display: flex;
 
-            flex-direction: column;
+.section-title .gold {
+    color: var(--yellow-dark);
+}
 
-            align-items: center;
 
-            justify-content: center;
+.section-description {
 
-            padding: 30px;
+    max-width: 750px;
 
-            color: white;
-        }
+    margin:
+        0 auto 50px;
 
+    color: var(--gray);
 
-        .play {
+    font-size: 17px;
+}
 
-            width: 82px;
 
-            height: 82px;
+/* =========================================================
+   12 IMAGES
+========================================================= */
 
-            margin-bottom: 20px;
+.proof-grid {
 
-            display: flex;
+    display: grid;
 
-            align-items: center;
+    grid-template-columns:
+        repeat(3, 1fr);
 
-            justify-content: center;
+    gap: 22px;
+}
 
-            border:
-                1px solid
-                rgba(244,208,111,.5);
 
-            border-radius: 50%;
+.proof-card {
 
-            background:
-                rgba(212,160,23,.12);
+    padding: 8px;
 
-            color: var(--gold-light);
+    min-height: 315px;
 
-            font-size: 34px;
-        }
+    background: #FFFFFF;
 
+    border:
+        2px solid
+        var(--border);
 
-        .video-placeholder h3 {
+    border-radius: 18px;
 
-            margin-bottom: 8px;
+    box-shadow:
+        0 12px 35px
+        rgba(80,60,0,0.10);
 
-            font-family: "Montserrat", sans-serif;
+    transition: 0.25s ease;
+}
 
-            font-size: 24px;
-        }
 
+.proof-card:hover {
+    transform:
+        translateY(-5px);
+}
 
-        .video-placeholder p {
 
-            color: #999999;
-        }
+.proof-placeholder {
 
+    height: 295px;
 
-        /* =====================================================
-           BOUTON PREMIUM
-        ===================================================== */
+    display: flex;
 
-        .btn {
+    flex-direction: column;
 
-            display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
-            justify-content: center;
+    text-align: center;
 
-            align-items: center;
+    border-radius: 12px;
 
-            min-height: 58px;
+    background:
+        linear-gradient(
+            145deg,
+            #F7E6A4,
+            #FFF8DF
+        );
 
-            padding:
-                0 32px;
+    color: var(--yellow-deep);
+}
 
-            border:
-                1px solid
-                #e5bb3b;
 
-            border-radius: 12px;
+.proof-placeholder strong {
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #f1cf62,
-                    #c99a19
-                );
+    margin-bottom: 7px;
 
-            color: #111111;
+    font-family: "Montserrat", sans-serif;
 
-            font-size: 16px;
+    font-size: 17px;
+}
 
-            font-weight: 900;
 
-            box-shadow:
-                0 12px 35px
-                rgba(212,160,23,.20);
+.proof-placeholder span {
 
-            transition:
-                .25s ease;
+    font-size: 13px;
 
-            cursor: pointer;
-        }
+    color: #746536;
+}
 
 
-        .btn:hover {
+/* =========================================================
+   TÉMOIGNAGES
+========================================================= */
 
-            transform:
-                translateY(-3px);
+.testimonials {
 
-            box-shadow:
-                0 18px 45px
-                rgba(212,160,23,.30);
-        }
+    padding:
+        105px 0;
 
+    background: #FFFFFF;
 
-        /* =====================================================
-           SECTION PREUVES
-        ===================================================== */
+    text-align: center;
+}
 
-        .proof-section {
 
-            padding:
-                100px 0;
+.testimonials-grid {
 
-            background:
-                linear-gradient(
-                    180deg,
-                    #fffdf7,
-                    #f9f3df
-                );
+    display: grid;
 
-            text-align: center;
-        }
+    grid-template-columns:
+        repeat(2, 1fr);
 
+    gap: 25px;
 
-        .section-label {
+    text-align: left;
+}
 
-            display: inline-block;
 
-            margin-bottom: 15px;
+.testimonial-card {
 
-            color: var(--gold-dark);
+    padding: 30px;
 
-            font-size: 13px;
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF,
+            #FFF9E8
+        );
 
-            font-weight: 900;
+    border:
+        2px solid
+        var(--border);
 
-            letter-spacing: 1.5px;
+    border-radius: 20px;
 
-            text-transform: uppercase;
-        }
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.06);
+}
 
 
-        .section-title {
+.testimonial-top {
 
-            margin-bottom: 20px;
+    display: flex;
 
-            font-family: "Montserrat", sans-serif;
+    align-items: center;
 
-            font-size: clamp(
-                32px,
-                5vw,
-                48px
-            );
+    gap: 15px;
 
-            line-height: 1.12;
+    margin-bottom: 18px;
+}
 
-            font-weight: 900;
 
-            letter-spacing: -1px;
-        }
+.testimonial-photo {
 
+    width: 65px;
+    height: 65px;
 
-        .section-title .gold {
+    display: flex;
 
-            color: var(--gold-dark);
-        }
+    justify-content: center;
+    align-items: center;
 
+    border:
+        3px solid
+        var(--yellow);
 
-        .section-description {
+    border-radius: 50%;
 
-            max-width: 750px;
+    background:
+        #FFF2B9;
 
-            margin:
-                0 auto
-                50px;
+    font-size: 25px;
 
-            color: var(--text-light);
+    flex-shrink: 0;
+}
 
-            font-size: 17px;
-        }
 
+.testimonial-name {
 
-        /* =====================================================
-           12 IMAGES
-        ===================================================== */
+    font-family: "Montserrat", sans-serif;
 
-        .proof-grid {
+    font-size: 17px;
 
-            display: grid;
+    font-weight: 900;
+}
 
-            grid-template-columns:
-                repeat(3, 1fr);
 
-            gap: 22px;
+.stars {
 
-            text-align: left;
-        }
+    color:
+        var(--yellow-dark);
 
+    letter-spacing: 2px;
+}
 
-        .proof-card {
 
-            padding: 10px;
+.testimonial-card p {
 
-            min-height: 315px;
+    color:
+        var(--gray);
 
-            background: #ffffff;
+    font-size: 15px;
+}
 
-            border:
-                1px solid
-                var(--border);
 
-            border-radius: 18px;
+/* =========================================================
+   COMMENT ÇA MARCHE — NOIR
+========================================================= */
 
-            box-shadow:
-                0 12px 35px
-                rgba(80,60,0,.07);
+.how {
 
-            transition:
-                .25s ease;
-        }
+    padding:
+        105px 0;
 
+    background:
+        #0B0B0B;
 
-        .proof-card:hover {
+    color: #FFFFFF;
+}
 
-            transform:
-                translateY(-5px);
 
-            box-shadow:
-                0 20px 45px
-                rgba(80,60,0,.12);
-        }
+.how .section-title {
+    color: #FFFFFF;
+}
 
 
-        .proof-placeholder {
+.how .section-description {
+    color: #AAAAAA;
+}
 
-            width: 100%;
 
-            height: 293px;
+.steps {
 
-            display: flex;
+    display: grid;
 
-            flex-direction: column;
+    grid-template-columns:
+        repeat(2, 1fr);
 
-            justify-content: center;
+    gap: 22px;
+}
 
-            align-items: center;
 
-            text-align: center;
+.step {
 
-            border-radius: 12px;
+    padding: 32px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #f8f8f8,
-                    #eeeae0
-                );
+    border:
+        1px solid
+        rgba(212,160,23,0.35);
 
-            color: #777777;
-        }
+    border-radius: 20px;
 
+    background:
+        linear-gradient(
+            145deg,
+            #181818,
+            #101010
+        );
+}
 
-        .proof-placeholder strong {
 
-            margin-bottom: 7px;
+.step-number {
 
-            color: #292929;
+    width: 50px;
+    height: 50px;
 
-            font-family: "Montserrat", sans-serif;
+    margin-bottom: 18px;
 
-            font-size: 17px;
-        }
+    display: flex;
 
+    justify-content: center;
+    align-items: center;
 
-        .proof-placeholder span {
+    border-radius: 50%;
 
-            font-size: 13px;
-        }
+    background:
+        var(--yellow);
 
+    color: #111111;
 
-        /* =====================================================
-           TÉMOIGNAGES
-        ===================================================== */
+    font-weight: 900;
+}
 
-        .testimonials {
 
-            padding:
-                105px 0;
+.step h3 {
 
-            background: #ffffff;
+    margin-bottom: 12px;
 
-            text-align: center;
-        }
+    font-family: "Montserrat", sans-serif;
 
+    color: #FFFFFF;
 
-        .testimonials-grid {
+    font-size: 21px;
+}
 
-            display: grid;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+.step p {
 
-            gap: 25px;
+    color: #AAAAAA;
 
-            text-align: left;
-        }
+    font-size: 15px;
+}
 
 
-        .testimonial-card {
+.final-message {
 
-            position: relative;
+    max-width: 850px;
 
-            padding: 30px;
+    margin:
+        50px auto 0;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #ffffff,
-                    #fffdf7
-                );
+    padding: 35px;
 
-            border:
-                1px solid
-                var(--border);
+    border:
+        1px solid
+        rgba(212,160,23,0.35);
 
-            border-radius: 20px;
+    border-radius: 20px;
 
-            box-shadow:
-                var(--shadow);
+    background:
+        #17130A;
 
-            transition:
-                .25s ease;
-        }
+    text-align: center;
+}
 
 
-        .testimonial-card:hover {
+.final-message h3 {
 
-            transform:
-                translateY(-4px);
-        }
+    margin-bottom: 12px;
 
+    color: var(--yellow-light);
 
-        .testimonial-top {
+    font-family: "Montserrat", sans-serif;
 
-            display: flex;
+    font-size: 24px;
+}
 
-            align-items: center;
 
-            gap: 15px;
+.final-message p {
+    color: #BBBBBB;
+}
 
-            margin-bottom: 18px;
-        }
 
+/* =========================================================
+   OFFRE — JAUNE FONCÉ
+========================================================= */
 
-        .testimonial-photo {
+.offer {
 
-            width: 65px;
+    padding:
+        110px 20px;
 
-            height: 65px;
+    background:
 
-            flex-shrink: 0;
+        linear-gradient(
+            135deg,
+            #A87800,
+            #D4A017,
+            #A87800
+        );
 
-            display: flex;
+    text-align: center;
+}
 
-            align-items: center;
 
-            justify-content: center;
+.offer-box {
 
-            overflow: hidden;
+    max-width: 850px;
 
-            border:
-                2px solid
-                var(--gold);
+    margin: auto;
 
-            border-radius: 50%;
+    padding:
+        55px 30px;
 
-            background:
-                var(--cream-2);
+    border:
+        3px solid
+        rgba(255,255,255,0.55);
 
-            font-size: 26px;
-        }
+    border-radius: 25px;
 
+    background:
+        rgba(255,255,255,0.14);
 
-        .testimonial-name {
+    backdrop-filter:
+        blur(8px);
 
-            font-family: "Montserrat", sans-serif;
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.20);
+}
 
-            font-size: 17px;
 
-            font-weight: 800;
-        }
+.offer-label {
 
+    margin-bottom: 15px;
 
-        .stars {
+    color: #111111;
 
-            margin-top: 3px;
+    font-size: 13px;
+    font-weight: 900;
 
-            color: var(--gold-dark);
+    letter-spacing: 1.5px;
+}
 
-            font-size: 16px;
 
-            letter-spacing: 2px;
-        }
+.offer h2 {
 
+    margin-bottom: 20px;
 
-        .testimonial-card p {
+    font-family: "Montserrat", sans-serif;
 
-            color: var(--text-light);
+    font-size: clamp(30px, 5vw, 45px);
 
-            font-size: 15px;
-        }
+    line-height: 1.15;
 
+    font-weight: 900;
 
-        /* =====================================================
-           COMMENT ÇA MARCHE
-        ===================================================== */
+    color: #111111;
+}
 
-        .how {
 
-            padding:
-                105px 0;
+.old-price {
 
-            background:
-                var(--black);
+    color: #4A3A08;
 
-            color: white;
-        }
+    font-size: 20px;
 
+    text-decoration:
+        line-through;
+}
 
-        .how .section-title {
 
-            color: white;
-        }
+.new-price {
 
+    margin:
+        5px 0 25px;
 
-        .how .section-description {
+    font-family: "Montserrat", sans-serif;
 
-            color: #a9a9a9;
-        }
+    font-size: 62px;
 
+    line-height: 1;
 
-        .steps {
+    font-weight: 900;
 
-            display: grid;
+    color: #FFFFFF;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+    text-shadow:
+        0 3px 15px
+        rgba(0,0,0,0.15);
+}
 
-            gap: 22px;
-        }
 
+.offer-description {
 
-        .step {
+    max-width: 650px;
 
-            padding: 32px;
+    margin:
+        0 auto 28px;
 
-            border:
-                1px solid
-                rgba(212,160,23,.22);
+    color: #2D250F;
 
-            border-radius: 20px;
+    font-size: 14px;
+}
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #171717,
-                    #101010
-                );
 
-            box-shadow:
-                0 15px 45px
-                rgba(0,0,0,.25);
-        }
+/* =========================================================
+   MODAL
+========================================================= */
 
+.modal {
 
-        .step-number {
+    position: fixed;
 
-            display: inline-flex;
+    inset: 0;
 
-            width: 48px;
+    z-index: 9999;
 
-            height: 48px;
+    display: none;
 
-            align-items: center;
+    justify-content: center;
+    align-items: center;
 
-            justify-content: center;
+    padding: 20px;
 
-            margin-bottom: 18px;
+    background:
+        rgba(0,0,0,0.82);
+}
 
-            border-radius: 50%;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #f2d06b,
-                    #b9850d
-                );
+.modal.active {
+    display: flex;
+}
 
-            color: #111111;
 
-            font-weight: 900;
-        }
+.modal-box {
 
+    position: relative;
 
-        .step h3 {
+    width: 100%;
 
-            margin-bottom: 12px;
+    max-width: 510px;
 
-            font-family: "Montserrat", sans-serif;
+    padding:
+        45px 30px;
 
-            color: #ffffff;
+    border:
+        3px solid
+        var(--yellow);
 
-            font-size: 21px;
-        }
+    border-radius: 24px;
 
+    background:
+        linear-gradient(
+            145deg,
+            #1A1A1A,
+            #080808
+        );
 
-        .step p {
+    color: #FFFFFF;
 
-            color: #aaa;
+    text-align: center;
+}
 
-            font-size: 15px;
-        }
 
+.close {
 
-        .final-message {
+    position: absolute;
 
-            max-width: 850px;
+    top: 10px;
+    right: 18px;
 
-            margin:
-                50px auto
-                0;
+    border: none;
 
-            padding: 35px;
+    background: transparent;
 
-            border:
-                1px solid
-                rgba(212,160,23,.30);
+    color: #AAAAAA;
 
-            border-radius: 20px;
+    font-size: 30px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #19150a,
-                    #111111
-                );
+    cursor: pointer;
+}
 
-            text-align: center;
-        }
 
+.modal-box h2 {
 
-        .final-message h3 {
+    margin-bottom: 15px;
 
-            margin-bottom: 12px;
+    font-family: "Montserrat", sans-serif;
 
-            color: var(--gold-light);
+    font-size: 29px;
+}
 
-            font-family: "Montserrat", sans-serif;
 
-            font-size: 24px;
-        }
+.modal-old {
 
+    color: #777777;
 
-        .final-message p {
+    text-decoration:
+        line-through;
 
-            color: #c4c4c4;
-        }
+    font-size: 18px;
+}
 
 
-        /* =====================================================
-           OFFRE
-        ===================================================== */
+.modal-price {
 
-        .offer {
+    margin:
+        6px 0 20px;
 
-            padding:
-                110px 20px;
+    color:
+        var(--yellow-light);
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff7d9,
-                    #ffffff
-                );
+    font-family: "Montserrat", sans-serif;
 
-            text-align: center;
-        }
+    font-size: 48px;
 
+    font-weight: 900;
+}
 
-        .offer-box {
 
-            max-width: 850px;
+.modal-box p {
 
-            margin: auto;
+    margin-bottom: 25px;
 
-            padding:
-                55px 30px;
+    color: #AAAAAA;
 
-            border:
-                1px solid
-                var(--border);
+    font-size: 15px;
+}
 
-            border-radius: 25px;
 
-            background: #ffffff;
+.modal-box .btn {
+    width: 100%;
+}
 
-            box-shadow:
-                0 25px 70px
-                rgba(90,70,0,.10);
-        }
 
+/* =========================================================
+   FOOTER — JAUNE FONCÉ
+========================================================= */
 
-        .offer-label {
+footer {
 
-            margin-bottom: 15px;
+    padding:
+        35px 20px;
 
-            color: var(--gold-dark);
+    background:
+        #A87800;
 
-            font-size: 13px;
+    color: #111111;
 
-            font-weight: 900;
+    text-align: center;
 
-            letter-spacing: 1.5px;
+    font-size: 13px;
 
-            text-transform: uppercase;
-        }
+    font-weight: 700;
+}
 
 
-        .offer h2 {
+.footer-brand {
 
-            margin-bottom: 20px;
+    margin-bottom: 8px;
 
-            font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 
-            font-size: clamp(
-                30px,
-                5vw,
-                45px
-            );
+    font-size: 20px;
 
-            line-height: 1.15;
+    font-weight: 900;
+}
 
-            font-weight: 900;
-        }
 
+/* =========================================================
+   MOBILE
+========================================================= */
 
-        .old-price {
+@media (max-width: 850px) {
 
-            color: #999999;
+    .proof-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
 
-            font-size: 20px;
+    .steps {
+        grid-template-columns:
+            1fr;
+    }
+}
 
-            text-decoration: line-through;
-        }
 
+@media (max-width: 600px) {
 
-        .new-price {
+    .hero {
+        padding:
+            120px 15px
+            65px;
+    }
 
-            margin:
-                5px 0
-                25px;
+    .hero h1 {
+        font-size: 40px;
+    }
 
-            color: var(--gold-dark);
+    .hero-subtitle {
+        font-size: 17px;
+    }
 
-            font-family: "Montserrat", sans-serif;
+    .main-video,
+    .video-placeholder {
+        min-height: 300px;
+    }
 
-            font-size: 62px;
+    .proof-grid {
+        grid-template-columns:
+            1fr;
+    }
 
-            line-height: 1;
+    .testimonials-grid {
+        grid-template-columns:
+            1fr;
+    }
 
-            font-weight: 900;
-        }
+    .new-price {
+        font-size: 48px;
+    }
 
+    .btn {
+        width: 100%;
+    }
 
-        .offer-description {
+}
 
-            max-width: 650px;
-
-            margin:
-                0 auto
-                28px;
-
-            color: var(--text-light);
-
-            font-size: 14px;
-        }
-
-
-        /* =====================================================
-           MODAL
-        ===================================================== */
-
-        .modal {
-
-            position: fixed;
-
-            inset: 0;
-
-            z-index: 9999;
-
-            display: none;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding: 20px;
-
-            background:
-                rgba(0,0,0,.82);
-        }
-
-
-        .modal.active {
-
-            display: flex;
-        }
-
-
-        .modal-box {
-
-            position: relative;
-
-            width: 100%;
-
-            max-width: 510px;
-
-            padding: 45px 30px;
-
-            border:
-                1px solid
-                rgba(212,160,23,.40);
-
-            border-radius: 24px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #171717,
-                    #0b0b0b
-                );
-
-            color: white;
-
-            text-align: center;
-
-            box-shadow:
-                0 30px 100px
-                rgba(0,0,0,.55);
-        }
-
-
-        .close {
-
-            position: absolute;
-
-            top: 10px;
-
-            right: 18px;
-
-            border: none;
-
-            background: transparent;
-
-            color: #aaa;
-
-            font-size: 30px;
-
-            cursor: pointer;
-        }
-
-
-        .modal-box h2 {
-
-            margin-bottom: 15px;
-
-            font-family: "Montserrat", sans-serif;
-
-            font-size: 29px;
-        }
-
-
-        .modal-old {
-
-            color: #888;
-
-            text-decoration: line-through;
-
-            font-size: 18px;
-        }
-
-
-        .modal-price {
-
-            margin:
-                6px 0
-                20px;
-
-            color: var(--gold-light);
-
-            font-family: "Montserrat", sans-serif;
-
-            font-size: 48px;
-
-            font-weight: 900;
-        }
-
-
-        .modal-box p {
-
-            margin-bottom: 25px;
-
-            color: #aaa;
-
-            font-size: 15px;
-        }
-
-
-        .modal-box .btn {
-
-            width: 100%;
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        footer {
-
-            padding:
-                25px 20px;
-
-            background: #050505;
-
-            color: #777777;
-
-            text-align: center;
-
-            font-size: 12px;
-        }
-
-
-        /* =====================================================
-           TABLET
-        ===================================================== */
-
-        @media (max-width: 850px) {
-
-            .proof-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .steps {
-
-                grid-template-columns:
-                    1fr;
-            }
-
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 600px) {
-
-            .hero {
-
-                padding:
-                    120px 15px
-                    70px;
-            }
-
-
-            .hero h1 {
-
-                font-size: 40px;
-
-                letter-spacing:
-                    -1.5px;
-            }
-
-
-            .hero-subtitle {
-
-                font-size: 16px;
-            }
-
-
-            .starting-price {
-
-                font-size: 16px;
-            }
-
-
-            .main-video {
-
-                min-height: 300px;
-            }
-
-
-            .video-placeholder {
-
-                min-height: 300px;
-            }
-
-
-            .proof-grid {
-
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .testimonials-grid {
-
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .proof-placeholder {
-
-                height: 285px;
-            }
-
-
-            .proof-card {
-
-                min-height: 307px;
-            }
-
-
-            .offer-box {
-
-                padding:
-                    40px 20px;
-            }
-
-
-            .new-price {
-
-                font-size: 48px;
-            }
-
-
-            .btn {
-
-                width: 100%;
-            }
-
-        }
-
-    </style>
-
+</style>
 </head>
 
 
 <body>
 
 
-    <!-- =====================================================
-         HEADER
-    ===================================================== -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    <header>
+<header>
 
-        <div class="container">
+    <div class="container">
 
-            <div class="header-content">
+        <div class="logo">
 
-                <div class="logo">
-
-                    BINANCE
-                    <span>BOOSTER™</span>
-
-                </div>
-
-            </div>
+            BINANCE
+            <span>BOOSTER™</span>
 
         </div>
 
-    </header>
+    </div>
+
+</header>
 
 
 
-    <!-- =====================================================
-         HERO
-    ===================================================== -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="hero-content">
-
-
-            <div class="premium-badge">
-
-                ✦ FORMATION PREMIUM
-
-            </div>
+    <div class="hero-content">
 
 
-            <!-- NOUVELLE PHRASE -->
-
-            <div class="starting-price">
-
-                AVEC SEULEMENT 5.789 FCFA 👇
-
-            </div>
+        <div class="badge">
+            ✦ FORMATION PREMIUM
+        </div>
 
 
-            <h1>
+        <div class="starting-price">
 
-                Gagne jusqu'à
-
-                <span class="gold">
-
-                    150.000 F CFA / mois
-
-                </span>
-
-            </h1>
-
-
-            <p class="hero-subtitle">
-
-                Grâce à Binance depuis ton téléphone.
-
-            </p>
-
-
-            <p class="audio-note">
-
-                🔊 Appuie sur l'icône du son sur la vidéo
-                pour activer l'audio.
-
-            </p>
-
-
-            <!-- VIDÉO -->
-
-            <div class="main-video">
-
-                <div class="video-placeholder">
-
-                    <div class="play">
-                        ▶
-                    </div>
-
-                    <h3>
-                        Vidéo de présentation
-                    </h3>
-
-                    <p>
-                        Ajoute ta vidéo ici.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <a
-                href="#preuves"
-                class="btn">
-
-                DÉCOUVRIR BINANCE BOOSTER ↓
-
-            </a>
+            AVEC SEULEMENT 5.789 FCFA 👇
 
         </div>
 
-    </section>
 
+        <h1>
 
+            Gagne jusqu'à
 
-    <!-- =====================================================
-         PREUVES — 12 EMPLACEMENTS
-    ===================================================== -->
-
-    <section
-        class="proof-section"
-        id="preuves">
-
-        <div class="container">
-
-
-            <span class="section-label">
-
-                LES PREUVES
-
+            <span>
+                150.000 F CFA / mois
             </span>
 
-
-            <h2 class="section-title">
-
-                Les hommes mentent,
-                <span class="gold">
-                    mais pas les chiffres 👇…
-                </span>
-
-            </h2>
+        </h1>
 
 
-            <p class="section-description">
+        <p class="hero-subtitle">
 
-                Présente ici tes véritables captures,
-                résultats ou éléments de preuve.
+            Grâce à Binance depuis ton téléphone.
 
-            </p>
-
-
-            <div class="proof-grid">
+        </p>
 
 
-                <!-- 01 -->
+        <p class="audio-note">
 
-                <div class="proof-card">
+            🔊 Appuie sur l'icône du son sur la vidéo
+            pour activer l'audio.
 
-                    <div class="proof-placeholder">
+        </p>
 
-                        <strong>
-                            📸 PREUVE 01
-                        </strong>
 
-                        <span>
-                            Ajoute ton image ici
-                        </span>
+        <div class="main-video">
 
-                    </div>
+            <div class="video-placeholder">
 
+                <div class="play">
+                    ▶
                 </div>
-
-
-                <!-- 02 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 02
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 03 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 03
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 04 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 04
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 05 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 05
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 06 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 06
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 07 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 07
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 08 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 08
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 09 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 09
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 10 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 10
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 11 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 11
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 12 -->
-
-                <div class="proof-card">
-
-                    <div class="proof-placeholder">
-
-                        <strong>
-                            📸 PREUVE 12
-                        </strong>
-
-                        <span>
-                            Ajoute ton image ici
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         TÉMOIGNAGES — 6
-    ===================================================== -->
-
-    <section class="testimonials">
-
-        <div class="container">
-
-
-            <span class="section-label">
-
-                ⭐ TÉMOIGNAGES
-
-            </span>
-
-
-            <h2 class="section-title">
-
-                Voici ce que pensent les élèves
-                de cette formation
-
-            </h2>
-
-
-            <p class="section-description">
-
-                Ajoute ici les vrais témoignages de tes élèves.
-
-            </p>
-
-
-            <div class="testimonials-grid">
-
-
-                <!-- 01 -->
-
-                <div class="testimonial-card">
-
-                    <div class="testimonial-top">
-
-                        <div class="testimonial-photo">
-                            👤
-                        </div>
-
-                        <div>
-
-                            <div class="testimonial-name">
-                                Élève 01
-                            </div>
-
-                            <div class="stars">
-                                ★★★★★
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <p>
-                        Ajoute ici le témoignage réel
-                        de ton premier élève.
-                    </p>
-
-                </div>
-
-
-                <!-- 02 -->
-
-                <div class="testimonial-card">
-
-                    <div class="testimonial-top">
-
-                        <div class="testimonial-photo">
-                            👤
-                        </div>
-
-                        <div>
-
-                            <div class="testimonial-name">
-                                Élève 02
-                            </div>
-
-                            <div class="stars">
-                                ★★★★★
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <p>
-                        Ajoute ici le témoignage réel
-                        de ton deuxième élève.
-                    </p>
-
-                </div>
-
-
-                <!-- 03 -->
-
-                <div class="testimonial-card">
-
-                    <div class="testimonial-top">
-
-                        <div class="testimonial-photo">
-                            👤
-                        </div>
-
-                        <div>
-
-                            <div class="testimonial-name">
-                                Élève 03
-                            </div>
-
-                            <div class="stars">
-                                ★★★★★
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <p>
-                        Ajoute ici le témoignage réel
-                        de ton troisième élève.
-                    </p>
-
-                </div>
-
-
-                <!-- 04 -->
-
-                <div class="testimonial-card">
-
-                    <div class="testimonial-top">
-
-                        <div class="testimonial-photo">
-                            👤
-                        </div>
-
-                        <div>
-
-                            <div class="testimonial-name">
-                                Élève 04
-                            </div>
-
-                            <div class="stars">
-                                ★★★★★
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <p>
-                        Ajoute ici le témoignage réel
-                        de ton quatrième élève.
-                    </p>
-
-                </div>
-
-
-                <!-- 05 -->
-
-                <div class="testimonial-card">
-
-                    <div class="testimonial-top">
-
-                        <div class="testimonial-photo">
-                            👤
-                        </div>
-
-                        <div>
-
-                            <div class="testimonial-name">
-                                Élève 05
-                            </div>
-
-                            <div class="stars">
-                                ★★★★★
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <p>
-                        Ajoute ici le témoignage réel
-                        de ton cinquième élève.
-                    </p>
-
-                </div>
-
-
-                <!-- 06 -->
-
-                <div class="testimonial-card">
-
-                    <div class="testimonial-top">
-
-                        <div class="testimonial-photo">
-                            👤
-                        </div>
-
-                        <div>
-
-                            <div class="testimonial-name">
-                                Élève 06
-                            </div>
-
-                            <div class="stars">
-                                ★★★★★
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <p>
-                        Ajoute ici le témoignage réel
-                        de ton sixième élève.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         COMMENT ÇA MARCHE
-    ===================================================== -->
-
-    <section class="how">
-
-        <div class="container">
-
-
-            <span class="section-label">
-
-                BINANCE BOOSTER™
-
-            </span>
-
-
-            <h2 class="section-title">
-
-                VOICI COMMENT ÇA MARCHE
-                AVEC BINANCE BOOSTER
-
-            </h2>
-
-
-            <p class="section-description">
-
-                Une méthode progressive pour apprendre,
-                pratiquer et mieux gérer son utilisation
-                de Binance.
-
-            </p>
-
-
-            <div class="steps">
-
-
-                <!-- 01 -->
-
-                <div class="step">
-
-                    <div class="step-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Découvre Binance
-                        <small>
-                            — zéro expérience requise
-                        </small>
-                    </h3>
-
-                    <p>
-
-                        Tu commences par comprendre les bases :
-                        comment fonctionne Binance, comment créer
-                        et sécuriser ton compte, déposer de l'argent
-                        et éviter les erreurs de débutant.
-
-                        Tout est expliqué pas à pas, même si tu
-                        n'as jamais utilisé une plateforme crypto
-                        avant.
-
-                    </p>
-
-                </div>
-
-
-                <!-- 02 -->
-
-                <div class="step">
-
-                    <div class="step-number">
-                        02
-                    </div>
-
-                    <h3>
-                        Mets en place tes premières stratégies
-                    </h3>
-
-                    <p>
-
-                        Tu passes progressivement à l'action avec
-                        des méthodes adaptées à différents niveaux
-                        de budget.
-
-                        Tu apprends à comprendre les mécanismes
-                        d'achat et de vente ainsi que les fonctions
-                        de base.
-
-                    </p>
-
-                </div>
-
-
-                <!-- 03 -->
-
-                <div class="step">
-
-                    <div class="step-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Découvre les fonctions avancées de Binance
-                    </h3>
-
-                    <p>
-
-                        Explore des fonctionnalités comme le
-                        staking, Binance Earn, Launchpool,
-                        le cashback et d'autres possibilités
-                        disponibles selon les conditions de Binance.
-
-                    </p>
-
-                </div>
-
-
-                <!-- 04 -->
-
-                <div class="step">
-
-                    <div class="step-number">
-                        04
-                    </div>
-
-                    <h3>
-                        Optimise et sécurise tes gains
-                    </h3>
-
-                    <p>
-
-                        Tu apprends à gérer ton capital avec méthode,
-                        à protéger tes bénéfices et à réduire les
-                        risques.
-
-                        L'objectif est d'avancer avec une approche
-                        claire plutôt que de prendre des décisions
-                        impulsives.
-
-                    </p>
-
-                </div>
-
-
-                <!-- 05 -->
-
-                <div class="step">
-
-                    <div class="step-number">
-                        05
-                    </div>
-
-                    <h3>
-                        Répète et fais évoluer tes résultats
-                    </h3>
-
-                    <p>
-
-                        Tu appliques progressivement la méthode et
-                        analyses tes résultats.
-
-                        Ensuite, tu peux adapter ton capital et tes
-                        stratégies selon ta situation et ton niveau
-                        de risque.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="final-message">
 
                 <h3>
-                    Binance Booster n'est pas une formation théorique.
+                    Vidéo de présentation
+                </h3>
+
+                <p>
+                    Ajoute ta vidéo ici.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="#preuves"
+            class="btn">
+
+            DÉCOUVRIR BINANCE BOOSTER ↓
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     12 PREUVES
+===================================================== -->
+
+<section
+    class="proof-section"
+    id="preuves">
+
+    <div class="container">
+
+
+        <span class="section-label">
+            LES PREUVES
+        </span>
+
+
+        <h2 class="section-title">
+
+            Les hommes mentent,
+            <span class="gold">
+                mais pas les chiffres 👇…
+            </span>
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Ajoute ici tes véritables captures,
+            résultats ou éléments de preuve.
+
+        </p>
+
+
+        <div class="proof-grid">
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 01</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 02</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 03</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 04</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 05</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 06</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 07</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 08</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 09</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 10</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 11</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+
+            <div class="proof-card">
+                <div class="proof-placeholder">
+                    <strong>📸 PREUVE 12</strong>
+                    <span>Ajoute ton image ici</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     6 TÉMOIGNAGES
+===================================================== -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+
+        <span class="section-label">
+            ⭐ TÉMOIGNAGES
+        </span>
+
+
+        <h2 class="section-title">
+
+            Voici ce que pensent les élèves
+            de cette formation
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Ajoute ici les véritables témoignages
+            de tes élèves.
+
+        </p>
+
+
+        <div class="testimonials-grid">
+
+
+            <div class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="testimonial-photo">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <div class="testimonial-name">
+                            Élève 01
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Ajoute ici le témoignage réel
+                    de ton premier élève.
+                </p>
+
+            </div>
+
+
+            <div class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="testimonial-photo">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <div class="testimonial-name">
+                            Élève 02
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Ajoute ici le témoignage réel
+                    de ton deuxième élève.
+                </p>
+
+            </div>
+
+
+            <div class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="testimonial-photo">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <div class="testimonial-name">
+                            Élève 03
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Ajoute ici le témoignage réel
+                    de ton troisième élève.
+                </p>
+
+            </div>
+
+
+            <div class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="testimonial-photo">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <div class="testimonial-name">
+                            Élève 04
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Ajoute ici le témoignage réel
+                    de ton quatrième élève.
+                </p>
+
+            </div>
+
+
+            <div class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="testimonial-photo">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <div class="testimonial-name">
+                            Élève 05
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Ajoute ici le témoignage réel
+                    de ton cinquième élève.
+                </p>
+
+            </div>
+
+
+            <div class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="testimonial-photo">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <div class="testimonial-name">
+                            Élève 06
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Ajoute ici le témoignage réel
+                    de ton sixième élève.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMMENT ÇA MARCHE
+===================================================== -->
+
+<section class="how">
+
+    <div class="container">
+
+
+        <span class="section-label">
+            BINANCE BOOSTER™
+        </span>
+
+
+        <h2 class="section-title">
+
+            VOICI COMMENT ÇA MARCHE
+            AVEC BINANCE BOOSTER
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Une méthode progressive pour apprendre,
+            pratiquer et mieux utiliser Binance.
+
+        </p>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Découvre Binance
                 </h3>
 
                 <p>
 
-                    C'est un plan d'action structuré qui t'accompagne
-                    du niveau débutant vers une meilleure compréhension
-                    et utilisation de Binance.
+                    Tu commences par comprendre les bases :
+                    comment fonctionne Binance, comment créer
+                    et sécuriser ton compte, déposer de l'argent
+                    et éviter les erreurs de débutant.
+
+                    Tout est expliqué pas à pas, même si tu
+                    n'as jamais utilisé une plateforme crypto
+                    avant.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Mets en place tes premières stratégies
+                </h3>
+
+                <p>
+
+                    Tu passes progressivement à l'action avec
+                    des méthodes adaptées à différents niveaux
+                    de budget.
+
+                    Tu apprends à comprendre les mécanismes
+                    d'achat et de vente ainsi que les fonctions
+                    de base.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Découvre les fonctions avancées de Binance
+                </h3>
+
+                <p>
+
+                    Explore des fonctionnalités comme le
+                    staking, Binance Earn, Launchpool,
+                    le cashback et d'autres possibilités
+                    disponibles selon les conditions de Binance.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Optimise et sécurise tes gains
+                </h3>
+
+                <p>
+
+                    Tu apprends à gérer ton capital avec méthode,
+                    à protéger tes bénéfices et à réduire les
+                    risques.
+
+                    L'objectif est d'avancer avec une approche
+                    claire plutôt que de prendre des décisions
+                    impulsives.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    05
+                </div>
+
+                <h3>
+                    Répète et fais évoluer tes résultats
+                </h3>
+
+                <p>
+
+                    Tu appliques progressivement la méthode et
+                    analyses tes résultats.
+
+                    Ensuite, tu peux adapter ton capital et tes
+                    stratégies selon ta situation et ton niveau
+                    de risque.
 
                 </p>
 
@@ -2200,221 +1760,224 @@
 
         </div>
 
-    </section>
 
+        <div class="final-message">
 
-
-    <!-- =====================================================
-         OFFRE
-    ===================================================== -->
-
-    <section class="offer">
-
-        <div class="offer-box">
-
-
-            <div class="offer-label">
-
-                🔥 OFFRE SPÉCIALE
-
-            </div>
-
-
-            <h2>
-
-                ACCÈS IMMÉDIAT À
-                BINANCE BOOSTER™
-
-            </h2>
-
-
-            <div class="old-price">
-
-                107.789 FCFA
-
-            </div>
-
-
-            <div class="new-price">
-
-                5.789 FCFA
-
-            </div>
-
-
-            <p class="offer-description">
-
-                Profite de l'offre actuelle et découvre
-                le programme Binance Booster™.
-
-                Les résultats ne sont pas garantis et peuvent
-                varier selon le capital, les compétences,
-                les conditions du marché et l'application
-                de la méthode.
-
-            </p>
-
-
-            <button
-                class="btn"
-                onclick="openModal()">
-
-                ✦ PROFITER DE L'OFFRE MAINTENANT
-
-            </button>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         POP-UP
-    ===================================================== -->
-
-    <div
-        class="modal"
-        id="offerModal"
-        onclick="closeOutside(event)">
-
-
-        <div class="modal-box">
-
-
-            <button
-                class="close"
-                onclick="closeModal()">
-
-                ×
-
-            </button>
-
-
-            <div class="offer-label">
-
-                OFFRE BINANCE BOOSTER™
-
-            </div>
-
-
-            <h2>
-
-                Profite de l'offre
-                maintenant
-
-            </h2>
-
-
-            <div class="modal-old">
-
-                107.789 FCFA
-
-            </div>
-
-
-            <div class="modal-price">
-
-                5.789 FCFA
-
-            </div>
-
+            <h3>
+                Binance Booster n'est pas une formation théorique.
+            </h3>
 
             <p>
 
-                Accède à Binance Booster™
-                et commence ton parcours
-                de formation.
+                C'est un plan d'action structuré qui t'accompagne
+                du niveau débutant vers une meilleure compréhension
+                et utilisation de Binance.
 
             </p>
-
-
-            <!-- =================================================
-                 REMPLACE "#" PAR TON VRAI LIEN DE PAIEMENT
-            ================================================== -->
-
-            <a
-                href="#"
-                class="btn">
-
-                💳 PROFITER DE L'OFFRE À 5.789 FCFA
-
-            </a>
 
         </div>
 
     </div>
 
-
-
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
-
-    <footer>
-
-        © 2026 Binance Booster™
-        — Tous droits réservés.
-
-    </footer>
+</section>
 
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ===================================================== -->
+<!-- =====================================================
+     OFFRE — JAUNE FONCÉ
+===================================================== -->
 
-    <script>
+<section class="offer">
 
-        function openModal() {
+    <div class="offer-box">
 
-            document
-                .getElementById("offerModal")
-                .classList
-                .add("active");
+
+        <div class="offer-label">
+            🔥 OFFRE SPÉCIALE
+        </div>
+
+
+        <h2>
+
+            ACCÈS IMMÉDIAT À
+            BINANCE BOOSTER™
+
+        </h2>
+
+
+        <div class="old-price">
+            107.789 FCFA
+        </div>
+
+
+        <div class="new-price">
+            5.789 FCFA
+        </div>
+
+
+        <p class="offer-description">
+
+            Profite de l'offre actuelle et découvre
+            le programme Binance Booster™.
+
+            Les résultats peuvent varier selon le capital,
+            les compétences, les conditions du marché
+            et l'application de la méthode.
+
+        </p>
+
+
+        <button
+            class="btn"
+            onclick="openModal()">
+
+            ✦ PROFITER DE L'OFFRE MAINTENANT
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     POP-UP
+===================================================== -->
+
+<div
+    class="modal"
+    id="offerModal"
+    onclick="closeOutside(event)">
+
+    <div class="modal-box">
+
+
+        <button
+            class="close"
+            onclick="closeModal()">
+
+            ×
+
+        </button>
+
+
+        <div class="offer-label">
+            OFFRE BINANCE BOOSTER™
+        </div>
+
+
+        <h2>
+            Profite de l'offre maintenant
+        </h2>
+
+
+        <div class="modal-old">
+            107.789 FCFA
+        </div>
+
+
+        <div class="modal-price">
+            5.789 FCFA
+        </div>
+
+
+        <p>
+
+            Accède à Binance Booster™
+            et commence ton parcours
+            de formation.
+
+        </p>
+
+
+        <!-- REMPLACER # PAR TON LIEN DE PAIEMENT -->
+
+        <a
+            href="#"
+            class="btn">
+
+            💳 PROFITER DE L'OFFRE À 5.789 FCFA
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER — JAUNE FONCÉ
+===================================================== -->
+
+<footer>
+
+    <div class="footer-brand">
+        BINANCE BOOSTER™
+    </div>
+
+    © 2026 — Tous droits réservés.
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   POP-UP
+========================================================= */
+
+function openModal() {
+
+    document
+        .getElementById("offerModal")
+        .classList
+        .add("active");
+
+}
+
+
+function closeModal() {
+
+    document
+        .getElementById("offerModal")
+        .classList
+        .remove("active");
+
+}
+
+
+function closeOutside(event) {
+
+    if (
+        event.target.id === "offerModal"
+    ) {
+
+        closeModal();
+
+    }
+
+}
+
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeModal();
 
         }
 
+    }
+);
 
-        function closeModal() {
-
-            document
-                .getElementById("offerModal")
-                .classList
-                .remove("active");
-
-        }
-
-
-        function closeOutside(event) {
-
-            if (
-                event.target.id === "offerModal"
-            ) {
-
-                closeModal();
-
-            }
-
-        }
-
-
-        document.addEventListener(
-            "keydown",
-            function(event) {
-
-                if (
-                    event.key === "Escape"
-                ) {
-
-                    closeModal();
-
-                }
-
-            }
-        );
-
-    </script>
+</script>
 
 
 </body>
