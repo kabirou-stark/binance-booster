@@ -60,6 +60,10 @@
             --yellow-deep: #5C4100;
             --yellow-light: #F8E28A;
 
+            --blue: #123B73;
+            --blue-dark: #08244A;
+            --blue-light: #EAF2FF;
+
             --black: #080808;
             --black-soft: #151515;
 
@@ -90,9 +94,7 @@
             left: 0;
             width: 100%;
             z-index: 10;
-
             padding: 25px 20px;
-
             text-align: center;
         }
 
@@ -209,10 +211,7 @@
             width: 100%;
             max-width: 850px;
 
-            min-height: 450px;
-
-            margin: auto;
-            margin-bottom: 30px;
+            margin: 0 auto 30px;
 
             background: #050505;
 
@@ -226,43 +225,17 @@
                 0 25px 70px rgba(0,0,0,0.35);
         }
 
-        .video-placeholder {
+        .main-video video {
+            display: block;
+
+            width: 100%;
+            height: auto;
+
             min-height: 450px;
 
-            display: flex;
-            flex-direction: column;
+            object-fit: cover;
 
-            align-items: center;
-            justify-content: center;
-
-            color: #ffffff;
-        }
-
-        .play {
-            width: 80px;
-            height: 80px;
-
-            margin-bottom: 20px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: var(--yellow);
-
-            font-size: 30px;
-        }
-
-        .video-placeholder h3 {
-            margin-bottom: 5px;
-
-            font-size: 24px;
-        }
-
-        .video-placeholder p {
-            color: #999999;
+            background: #050505;
         }
 
 
@@ -655,6 +628,232 @@
 
 
         /* ==============================
+           GARANTIE
+        ============================== */
+
+        .guarantee {
+            padding: 115px 20px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #fffdf5,
+                    #ffffff
+                );
+
+            text-align: center;
+        }
+
+        .guarantee-box {
+            max-width: 950px;
+
+            margin: auto;
+
+            padding: 60px 35px;
+
+            border: 3px solid var(--yellow-dark);
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #fff9df
+                );
+
+            box-shadow:
+                0 25px 70px rgba(138,98,0,0.16);
+        }
+
+        .guarantee-title {
+            margin-bottom: 35px;
+
+            font-size: clamp(48px, 8vw, 82px);
+
+            line-height: 1;
+
+            font-weight: 1000;
+
+            letter-spacing: 2px;
+
+            color: var(--yellow-dark);
+
+            text-transform: uppercase;
+
+            text-shadow:
+                0 4px 15px rgba(138,98,0,0.18);
+        }
+
+        .guarantee-subtitle {
+            margin-bottom: 25px;
+
+            font-size: 27px;
+
+            font-weight: 900;
+
+            color: #111111;
+        }
+
+        .guarantee p {
+            max-width: 780px;
+
+            margin: 0 auto 18px;
+
+            color: #444444;
+
+            font-size: 17px;
+        }
+
+        .guarantee-badge {
+            display: inline-block;
+
+            margin: 15px 0 25px;
+
+            padding: 12px 24px;
+
+            border-radius: 50px;
+
+            background: var(--yellow-dark);
+
+            color: #ffffff;
+
+            font-size: 16px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+        }
+
+        .guarantee-note {
+            margin-top: 30px !important;
+
+            padding: 18px;
+
+            border-radius: 14px;
+
+            background: #fff4c7;
+
+            color: #5C4100 !important;
+
+            font-size: 13px !important;
+
+            font-weight: 700;
+        }
+
+
+        /* ==============================
+           FAQ
+        ============================== */
+
+        .faq-section {
+            padding: 115px 20px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #eef5ff,
+                    #ffffff
+                );
+
+            text-align: center;
+        }
+
+        .faq-title {
+            margin-bottom: 55px;
+
+            font-size: clamp(48px, 8vw, 82px);
+
+            line-height: 1;
+
+            font-weight: 1000;
+
+            letter-spacing: 2px;
+
+            color: var(--blue-dark);
+
+            text-transform: uppercase;
+
+            text-shadow:
+                0 4px 15px rgba(8,36,74,0.15);
+        }
+
+        .faq-container {
+            max-width: 950px;
+
+            margin: auto;
+
+            text-align: left;
+        }
+
+        .faq-item {
+            margin-bottom: 18px;
+
+            padding: 28px;
+
+            border: 2px solid rgba(8,36,74,0.12);
+
+            border-radius: 18px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 12px 35px rgba(8,36,74,0.07);
+        }
+
+        .faq-question {
+            margin-bottom: 12px;
+
+            color: #050505;
+
+            font-size: 20px;
+
+            line-height: 1.35;
+
+            font-weight: 900;
+        }
+
+        .faq-answer {
+            color: #555555;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+        }
+
+        .faq-answer strong {
+            color: #111111;
+        }
+
+
+        /* ==============================
+           AVERTISSEMENT
+        ============================== */
+
+        .risk-disclaimer {
+            max-width: 950px;
+
+            margin: 45px auto 0;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            background: #f5f5f5;
+
+            border: 1px solid #dddddd;
+
+            color: #666666;
+
+            text-align: center;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
            MODALE
         ============================== */
 
@@ -824,11 +1023,7 @@
                 font-size: 17px;
             }
 
-            .main-video {
-                min-height: 300px;
-            }
-
-            .video-placeholder {
+            .main-video video {
                 min-height: 300px;
             }
 
@@ -852,6 +1047,35 @@
 
             .btn {
                 width: 100%;
+            }
+
+            .guarantee {
+                padding: 80px 15px;
+            }
+
+            .guarantee-box {
+                padding: 45px 20px;
+            }
+
+            .guarantee-title,
+            .faq-title {
+                font-size: 48px;
+            }
+
+            .guarantee-subtitle {
+                font-size: 22px;
+            }
+
+            .faq-section {
+                padding: 80px 15px;
+            }
+
+            .faq-item {
+                padding: 22px 18px;
+            }
+
+            .faq-question {
+                font-size: 18px;
             }
 
         }
@@ -916,21 +1140,22 @@
 
         <div class="main-video">
 
-            <div class="video-placeholder">
+            <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="photos/video-poster.jpg"
+            >
 
-                <div class="play">
-                    ▶
-                </div>
+                <source
+                    src="videos/presentation.mp4"
+                    type="video/mp4"
+                >
 
-                <h3>
-                    Vidéo de présentation
-                </h3>
+                Ton navigateur ne prend pas en charge
+                la lecture vidéo.
 
-                <p>
-                    Ta vidéo sera ajoutée ici.
-                </p>
-
-            </div>
+            </video>
 
         </div>
 
@@ -973,113 +1198,73 @@
         <div class="proof-grid">
 
 
-            <!-- PREUVE 1 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3715.png"
                     alt="Preuve Binance Booster 1">
-
             </div>
 
 
-            <!-- PREUVE 2 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3716.png"
                     alt="Preuve Binance Booster 2">
-
             </div>
 
 
-            <!-- PREUVE 3 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3717.png"
                     alt="Preuve Binance Booster 3">
-
             </div>
 
 
-            <!-- PREUVE 4 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3718.png"
                     alt="Preuve Binance Booster 4">
-
             </div>
 
 
-            <!-- PREUVE 5 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3719.png"
                     alt="Preuve Binance Booster 5">
-
             </div>
 
 
-            <!-- PREUVE 6 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3720.png"
                     alt="Preuve Binance Booster 6">
-
             </div>
 
 
-            <!-- PREUVE 7 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3721.png"
                     alt="Preuve Binance Booster 7">
-
             </div>
 
 
-            <!-- PREUVE 8 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3722.png"
                     alt="Preuve Binance Booster 8">
-
             </div>
 
 
-            <!-- PREUVE 9 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3723.png"
                     alt="Preuve Binance Booster 9">
-
             </div>
 
 
-            <!-- PREUVE 10 -->
-
             <div class="proof-card">
-
                 <img
                     src="photos/IMG_3724.png"
                     alt="Preuve Binance Booster 10">
-
             </div>
 
 
@@ -1120,8 +1305,6 @@
         <div class="testimonials-grid">
 
 
-            <!-- TEMOIGNAGE 1 -->
-
             <div class="testimonial-card">
 
                 <img
@@ -1130,8 +1313,6 @@
 
             </div>
 
-
-            <!-- TEMOIGNAGE 2 -->
 
             <div class="testimonial-card">
 
@@ -1179,8 +1360,6 @@
         <div class="steps">
 
 
-            <!-- ETAPE 1 -->
-
             <div class="step">
 
                 <div class="step-number">
@@ -1207,8 +1386,6 @@
             </div>
 
 
-            <!-- ETAPE 2 -->
-
             <div class="step">
 
                 <div class="step-number">
@@ -1233,8 +1410,6 @@
             </div>
 
 
-            <!-- ETAPE 3 -->
-
             <div class="step">
 
                 <div class="step-number">
@@ -1256,8 +1431,6 @@
 
             </div>
 
-
-            <!-- ETAPE 4 -->
 
             <div class="step">
 
@@ -1282,8 +1455,6 @@
 
             </div>
 
-
-            <!-- ETAPE 5 -->
 
             <div class="step">
 
@@ -1379,6 +1550,385 @@
             PROFITER DE L'OFFRE MAINTENANT
 
         </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     GARANTIE
+     DERNIERE GRANDE SECTION
+========================================= -->
+
+<section class="guarantee">
+
+    <div class="guarantee-box">
+
+        <h2 class="guarantee-title">
+            GARANTIE
+        </h2>
+
+        <div class="guarantee-badge">
+            GARANTIE 7 JOURS
+        </div>
+
+        <h3 class="guarantee-subtitle">
+
+            Une garantie pour te permettre
+            de découvrir la formation sereinement.
+
+        </h3>
+
+        <p>
+
+            Tu ne veux pas investir dans une formation
+            sans savoir si elle peut réellement t'être utile.
+
+        </p>
+
+        <p>
+
+            C'est pour cette raison que nous avons décidé
+            de mettre en place une garantie de 7 jours.
+
+        </p>
+
+        <p>
+
+            Si tu suis la formation, appliques réellement
+            les méthodes présentées et que les conditions
+            prévues par la garantie sont remplies sans obtenir
+            les résultats supplémentaires définis dans
+            les conditions de remboursement, tu peux demander
+            un remboursement dans le délai prévu.
+
+        </p>
+
+        <p>
+
+            L'objectif est de te permettre de découvrir
+            Binance Booster™ avec davantage de sérénité,
+            tout en restant conscient que les marchés
+            de cryptomonnaies comportent des risques.
+
+        </p>
+
+        <p class="guarantee-note">
+
+            ⚠️ Cette garantie ne constitue pas une garantie
+            de gains financiers. Les performances peuvent
+            varier selon le capital utilisé, les conditions
+            du marché, les frais, la stratégie appliquée
+            et le niveau d'expérience de chaque utilisateur.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FAQ
+========================================= -->
+
+<section class="faq-section">
+
+    <div class="container">
+
+        <h2 class="faq-title">
+            F.A.Q.
+        </h2>
+
+
+        <div class="faq-container">
+
+
+            <!-- FAQ 1 -->
+
+            <div class="faq-item">
+
+                <h3 class="faq-question">
+
+                    Est-ce qu'il faut absolument avoir
+                    un compte Binance pour utiliser ta stratégie ?
+
+                </h3>
+
+                <p class="faq-answer">
+
+                    Oui, c'est nécessaire pour mettre en pratique
+                    les fonctionnalités présentées dans la formation.
+                    Binance est la plateforme utilisée pour présenter
+                    les différentes méthodes et fonctionnalités
+                    étudiées dans le programme.
+
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 2 -->
+
+            <div class="faq-item">
+
+                <h3 class="faq-question">
+
+                    Je n'ai pas de compte Binance et je ne sais
+                    vraiment pas comment ça fonctionne.
+
+                </h3>
+
+                <p class="faq-answer">
+
+                    Pas de souci ! Dans la formation, tu es accompagné
+                    pas à pas pour comprendre comment créer et sécuriser
+                    ton compte Binance et découvrir progressivement
+                    son fonctionnement.
+
+                    <br><br>
+
+                    Si un lien d'affiliation est utilisé pour ton
+                    inscription, les éventuelles récompenses proposées
+                    par Binance dépendent des conditions et promotions
+                    en vigueur au moment de l'inscription.
+
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 3 -->
+
+            <div class="faq-item">
+
+                <h3 class="faq-question">
+
+                    Combien est-ce qu'il me faut dans mon compte Binance
+                    pour utiliser cette stratégie ?
+
+                </h3>
+
+                <p class="faq-answer">
+
+                    Tu n'as pas besoin de commencer avec un capital
+                    important pour apprendre et tester les méthodes.
+
+                    Un capital de 100 € peut servir d'exemple de départ
+                    pour certaines démonstrations, mais cela ne signifie
+                    pas qu'il permettra automatiquement de générer
+                    des gains.
+
+                    Le capital doit toujours être adapté à ta situation
+                    et au niveau de risque que tu acceptes.
+
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 4 -->
+
+            <div class="faq-item">
+
+                <h3 class="faq-question">
+
+                    Comment peut-on retirer ses gains depuis Binance ?
+
+                </h3>
+
+                <p class="faq-answer">
+
+                    Les modalités de retrait dépendent de ton pays,
+                    des méthodes disponibles sur Binance et des
+                    conditions applicables au moment du retrait.
+
+                    Selon les options disponibles dans ton pays,
+                    certaines solutions peuvent permettre de convertir
+                    tes actifs en monnaie locale puis d'utiliser
+                    un moyen de paiement ou de transfert disponible.
+
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 5 -->
+
+            <div class="faq-item">
+
+                <h3 class="faq-question">
+
+                    Y a-t-il un risque que je perde de l'argent
+                    avec cette stratégie ?
+
+                </h3>
+
+                <p class="faq-answer">
+
+                    Oui. Comme pour toute activité liée aux
+                    cryptomonnaies et au trading, il existe un risque
+                    de perte.
+
+                    <br><br>
+
+                    Aucun pourcentage ne permet de garantir qu'une
+                    stratégie est sans risque et aucun résultat financier
+                    ne peut être assuré.
+
+                    C'est pourquoi la formation insiste également
+                    sur la gestion du capital et la maîtrise du risque.
+
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 6 -->
+
+            <div class="faq-item">
+
+                <h3 class="faq-question">
+
+                    Combien de temps ça va me demander de mettre
+                    cette stratégie en place ?
+
+                </h3>
+
+                <p class="faq-answer">
+
+                    Environ 1 heure par semaine peut suffire pour
+                    consacrer du temps à l'apprentissage et au suivi
+                    de la stratégie.
+
+                    <br><br>
+
+                    Si tu souhaites suivre davantage les opportunités,
+                    tu peux également consacrer environ 30 minutes
+                    par jour à Binance.
+
+                    Le temps nécessaire dépendra cependant de ton
+                    niveau, de tes objectifs et de la méthode utilisée.
+
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 7 -->
+
+            <div class="faq-item">
+
+                <h3 class="faq-question">
+
+                    Combien est-ce que je peux espérer gagner
+                    avec ta stratégie ?
+
+                </h3>
+
+                <p class="faq-answer">
+
+                    Il n'est pas possible de garantir un montant
+                    ou un multiple précis.
+
+                    <br><br>
+
+                    Les résultats peuvent être très différents
+                    d'une personne à l'autre et dépendent notamment
+                    du capital de départ, des conditions du marché,
+                    des frais, de la stratégie utilisée et de la
+                    gestion du risque.
+
+                    <br><br>
+
+                    Les exemples de performances présentés sur cette
+                    page ne constituent donc pas une promesse de
+                    résultats futurs.
+
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 8 -->
+
+            <div class="faq-item">
+
+                <h3 class="faq-question">
+
+                    Si j'ai un souci quelconque avec la stratégie,
+                    qu'est-ce que je fais ?
+
+                </h3>
+
+                <p class="faq-answer">
+
+                    Un espace dédié est prévu pour les personnes
+                    qui suivent le programme.
+
+                    Tu peux y envoyer un message en expliquant
+                    ton problème afin d'obtenir une orientation
+                    et une aide concernant la formation.
+
+                    <br><br>
+
+                    Le délai de réponse peut varier selon le volume
+                    de demandes.
+
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 9 -->
+
+            <div class="faq-item">
+
+                <h3 class="faq-question">
+
+                    Comment cela se passe-t-il quand je rejoins
+                    le programme ?
+
+                </h3>
+
+                <p class="faq-answer">
+
+                    Une fois les formalités d'inscription terminées,
+                    tu reçois tes informations d'accès à ton espace
+                    membre.
+
+                    <br><br>
+
+                    Tu peux ensuite rejoindre la formation, suivre
+                    les différents modules et appliquer progressivement
+                    ce que tu découvriras.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- AVERTISSEMENT FINAL -->
+
+        <div class="risk-disclaimer">
+
+            <strong>AVERTISSEMENT IMPORTANT :</strong>
+
+            Binance Booster™ est une formation éducative.
+            Elle ne constitue pas un conseil financier personnalisé
+            et ne garantit aucun rendement.
+
+            Les cryptomonnaies peuvent être volatiles et entraîner
+            une perte partielle ou totale du capital investi.
+
+            N'investis jamais de l'argent que tu ne peux pas te
+            permettre de perdre.
+
+        </div>
 
     </div>
 
