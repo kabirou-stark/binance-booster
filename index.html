@@ -1,1187 +1,897 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Binance Booster™</title>
+    <meta charset="UTF-8">
 
-<meta name="description" content="Binance Booster™ — Formation pratique pour apprendre à utiliser Binance depuis son téléphone.">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>BINANCE BOOSTER™</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <meta
+        name="description"
+        content="Binance Booster™ - Formation et accompagnement pour apprendre à utiliser Binance depuis son téléphone."
+    >
 
-<style>
+    <style>
 
-/* =========================================================
-   COULEURS
-========================================================= */
+        /* ==============================
+           RESET
+        ============================== */
 
-:root {
-    --yellow: #D4A017;
-    --yellow-dark: #A87800;
-    --yellow-deep: #805D00;
-    --yellow-light: #F5D66F;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    --black: #0B0B0B;
-    --black-light: #171717;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    --white: #FFFFFF;
-    --cream: #FFF9E8;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #111111;
+            line-height: 1.6;
+        }
 
-    --text: #151515;
-    --gray: #666666;
+        img {
+            display: block;
+            max-width: 100%;
+        }
 
-    --border: rgba(128, 93, 0, 0.28);
-}
+        a {
+            text-decoration: none;
+        }
 
 
-/* =========================================================
-   RESET
-========================================================= */
+        /* ==============================
+           COULEURS
+        ============================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        :root {
+            --yellow: #D4A017;
+            --yellow-dark: #8A6200;
+            --yellow-deep: #5C4100;
+            --yellow-light: #F8E28A;
 
-html {
-    scroll-behavior: smooth;
-}
+            --black: #080808;
+            --black-soft: #151515;
 
-body {
-    font-family: "Inter", sans-serif;
-    background: var(--white);
-    color: var(--text);
-    line-height: 1.65;
-}
+            --white: #ffffff;
+            --gray: #666666;
+        }
 
-img {
-    width: 100%;
-    display: block;
-}
 
-a {
-    text-decoration: none;
-}
+        /* ==============================
+           CONTAINER
+        ============================== */
 
+        .container {
+            width: 100%;
+            max-width: 1150px;
+            margin: auto;
+            padding: 0 20px;
+        }
 
-/* =========================================================
-   CONTAINER
-========================================================= */
 
-.container {
-    width: 100%;
-    max-width: 1150px;
-    margin: auto;
-    padding: 0 20px;
-}
+        /* ==============================
+           HEADER
+        ============================== */
 
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
 
-/* =========================================================
-   HEADER — JAUNE FONCÉ
-========================================================= */
+            padding: 25px 20px;
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    padding: 25px 0;
-}
+            text-align: center;
+        }
 
-.logo {
-    text-align: center;
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #111111;
+        }
 
-    font-family: "Montserrat", sans-serif;
-    font-size: 22px;
-    font-weight: 900;
-    letter-spacing: 1px;
+        .logo span {
+            color: #ffffff;
+        }
 
-    color: #111111;
-}
 
-.logo span {
-    color: #FFFFFF;
-}
+        /* ==============================
+           HERO
+        ============================== */
 
+        .hero {
+            min-height: 100vh;
 
-/* =========================================================
-   HERO — JAUNE PUR ET FONCÉ
-========================================================= */
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-.hero {
+            padding: 120px 20px 80px;
 
-    min-height: 100vh;
+            text-align: center;
 
-    padding:
-        130px 20px
-        80px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #6F4D00,
+                    #D4A017,
+                    #7A5500
+                );
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+            color: #111111;
+        }
 
-    text-align: center;
+        .hero-content {
+            width: 100%;
+            max-width: 1000px;
+        }
 
-    background:
+        .badge {
+            display: inline-block;
 
-        radial-gradient(
-            circle at top,
-            rgba(255,255,255,0.18),
-            transparent 40%
-        ),
+            margin-bottom: 20px;
 
-        linear-gradient(
-            135deg,
-            #A87800,
-            #D4A017 45%,
-            #A87800
-        );
+            padding: 10px 20px;
 
-    color: #111111;
-}
+            border-radius: 50px;
 
+            background: rgba(255,255,255,0.15);
 
-.hero-content {
-    width: 100%;
-    max-width: 1000px;
-}
+            border: 1px solid rgba(0,0,0,0.25);
 
+            font-size: 13px;
+            font-weight: 900;
 
-.badge {
+            letter-spacing: 1px;
+        }
 
-    display: inline-block;
+        .starting-price {
+            margin-bottom: 10px;
 
-    margin-bottom: 25px;
+            font-size: 21px;
+            font-weight: 900;
+        }
 
-    padding:
-        10px 20px;
+        .hero h1 {
+            margin-bottom: 20px;
 
-    border:
-        1px solid
-        rgba(0,0,0,0.25);
+            font-size: clamp(42px, 7vw, 75px);
 
-    border-radius: 50px;
+            line-height: 1.05;
 
-    background:
-        rgba(255,255,255,0.16);
+            font-weight: 900;
 
-    color: #111111;
+            letter-spacing: -2px;
+        }
 
-    font-size: 13px;
-    font-weight: 900;
+        .hero h1 span {
+            display: block;
 
-    letter-spacing: 1px;
-}
+            color: #ffffff;
 
+            text-shadow:
+                0 4px 15px rgba(0,0,0,0.25);
+        }
 
-.starting-price {
+        .hero-subtitle {
+            margin-bottom: 10px;
 
-    margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 700;
+        }
 
-    font-family: "Montserrat", sans-serif;
+        .audio-note {
+            margin-bottom: 25px;
 
-    font-size: 19px;
-    font-weight: 900;
+            font-size: 14px;
+            font-weight: 700;
+        }
 
-    color: #111111;
-}
 
+        /* ==============================
+           VIDEO
+        ============================== */
 
-.hero h1 {
+        .main-video {
+            width: 100%;
+            max-width: 850px;
 
-    margin-bottom: 20px;
+            min-height: 450px;
 
-    font-family: "Montserrat", sans-serif;
+            margin: auto;
+            margin-bottom: 30px;
 
-    font-size: clamp(42px, 7vw, 75px);
+            background: #050505;
 
-    line-height: 1.03;
+            border: 4px solid rgba(255,255,255,0.8);
 
-    font-weight: 900;
+            border-radius: 20px;
 
-    letter-spacing: -2px;
+            overflow: hidden;
 
-    color: #111111;
-}
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.35);
+        }
 
+        .video-placeholder {
+            min-height: 450px;
 
-.hero h1 span {
+            display: flex;
+            flex-direction: column;
 
-    display: block;
+            align-items: center;
+            justify-content: center;
 
-    margin-top: 8px;
+            color: #ffffff;
+        }
 
-    color: #FFFFFF;
+        .play {
+            width: 80px;
+            height: 80px;
 
-    text-shadow:
-        0 3px 15px
-        rgba(0,0,0,0.18);
-}
+            margin-bottom: 20px;
 
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-.hero-subtitle {
+            border-radius: 50%;
 
-    max-width: 700px;
+            background: var(--yellow);
 
-    margin:
-        0 auto 28px;
+            font-size: 30px;
+        }
 
-    font-size: 20px;
-    font-weight: 700;
+        .video-placeholder h3 {
+            margin-bottom: 5px;
 
-    color: #191919;
-}
+            font-size: 24px;
+        }
 
+        .video-placeholder p {
+            color: #999999;
+        }
 
-.audio-note {
 
-    margin-bottom: 15px;
+        /* ==============================
+           BOUTONS
+        ============================== */
 
-    font-size: 14px;
-    font-weight: 700;
-}
+        .btn {
+            display: inline-flex;
 
+            align-items: center;
+            justify-content: center;
 
-/* =========================================================
-   VIDEO
-========================================================= */
+            min-height: 58px;
 
-.main-video {
+            padding: 0 32px;
 
-    width: 100%;
-    max-width: 850px;
+            border: 2px solid #111111;
 
-    min-height: 450px;
+            border-radius: 12px;
 
-    margin:
-        0 auto 30px;
+            background: #111111;
 
-    border:
-        4px solid
-        rgba(255,255,255,0.75);
+            color: #ffffff;
 
-    border-radius: 20px;
+            font-size: 16px;
+            font-weight: 900;
 
-    overflow: hidden;
+            cursor: pointer;
 
-    background: #080808;
+            transition: 0.25s ease;
+        }
 
-    box-shadow:
-        0 25px 70px
-        rgba(0,0,0,0.30);
-}
+        .btn:hover {
+            transform: translateY(-3px);
 
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.25);
+        }
 
-.video-placeholder {
 
-    min-height: 450px;
+        /* ==============================
+           TITRES
+        ============================== */
 
-    display: flex;
+        .section-label {
+            display: inline-block;
 
-    flex-direction: column;
+            margin-bottom: 12px;
 
-    justify-content: center;
+            color: var(--yellow-dark);
 
-    align-items: center;
+            font-size: 13px;
+            font-weight: 900;
 
-    color: #FFFFFF;
-}
+            letter-spacing: 1.5px;
+        }
 
+        .section-title {
+            margin-bottom: 20px;
 
-.play {
+            font-size: clamp(32px, 5vw, 50px);
 
-    width: 80px;
-    height: 80px;
+            line-height: 1.12;
 
-    margin-bottom: 20px;
+            font-weight: 900;
+        }
 
-    display: flex;
+        .section-description {
+            max-width: 750px;
 
-    justify-content: center;
-    align-items: center;
+            margin: 0 auto 45px;
 
-    border-radius: 50%;
+            color: var(--gray);
 
-    background: var(--yellow);
+            font-size: 17px;
+        }
 
-    color: #111111;
 
-    font-size: 30px;
-}
+        /* ==============================
+           PREUVES
+        ============================== */
 
+        .proof-section {
+            padding: 100px 0;
 
-.video-placeholder h3 {
+            text-align: center;
 
-    margin-bottom: 5px;
+            background:
+                linear-gradient(
+                    180deg,
+                    #FFF0A8,
+                    #ffffff
+                );
+        }
 
-    font-family: "Montserrat", sans-serif;
+        .proof-grid {
+            display: grid;
 
-    font-size: 24px;
-}
+            grid-template-columns:
+                repeat(3, 1fr);
 
+            gap: 22px;
 
-.video-placeholder p {
-    color: #AAAAAA;
-}
+            margin-top: 35px;
+        }
 
+        .proof-card {
+            padding: 7px;
 
-/* =========================================================
-   BOUTONS
-========================================================= */
+            background: #ffffff;
 
-.btn {
+            border: 2px solid rgba(138,98,0,0.25);
 
-    display: inline-flex;
+            border-radius: 18px;
 
-    justify-content: center;
-    align-items: center;
+            overflow: hidden;
 
-    min-height: 58px;
+            box-shadow:
+                0 15px 40px rgba(80,60,0,0.10);
 
-    padding:
-        0 32px;
+            transition: 0.25s ease;
+        }
 
-    border:
-        2px solid
-        #111111;
+        .proof-card:hover {
+            transform: translateY(-5px);
+        }
 
-    border-radius: 12px;
+        .proof-card img {
+            width: 100%;
 
-    background: #111111;
+            height: 320px;
 
-    color: #FFFFFF;
+            object-fit: cover;
 
-    font-size: 16px;
-    font-weight: 900;
+            border-radius: 12px;
+        }
 
-    cursor: pointer;
 
-    transition: 0.25s ease;
-}
+        /* ==============================
+           TEMOIGNAGES
+        ============================== */
 
+        .testimonials {
+            padding: 100px 0;
 
-.btn:hover {
+            background: #ffffff;
 
-    transform:
-        translateY(-3px);
+            text-align: center;
+        }
 
-    background: #000000;
+        .testimonials-grid {
+            display: grid;
 
-    box-shadow:
-        0 15px 35px
-        rgba(0,0,0,0.25);
-}
+            grid-template-columns:
+                repeat(2, 1fr);
 
+            gap: 25px;
 
-/* =========================================================
-   SECTION PREUVES — JAUNE
-========================================================= */
+            margin-top: 35px;
+        }
 
-.proof-section {
+        .testimonial-card {
+            padding: 10px;
 
-    padding:
-        100px 0;
+            background: #ffffff;
 
-    background:
+            border: 2px solid rgba(138,98,0,0.25);
 
-        linear-gradient(
-            180deg,
-            #FFF3BF,
-            #FFFFFF
-        );
+            border-radius: 20px;
 
-    text-align: center;
-}
+            overflow: hidden;
 
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.08);
 
-.section-label {
+            transition: 0.25s ease;
+        }
 
-    display: inline-block;
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
 
-    margin-bottom: 12px;
+        .testimonial-card img {
+            width: 100%;
 
-    color: var(--yellow-dark);
+            height: auto;
 
-    font-size: 13px;
-    font-weight: 900;
+            max-height: 600px;
 
-    letter-spacing: 1.5px;
-}
+            object-fit: contain;
 
+            border-radius: 14px;
+        }
 
-.section-title {
 
-    margin-bottom: 18px;
+        /* ==============================
+           COMMENT ÇA MARCHE
+        ============================== */
 
-    font-family: "Montserrat", sans-serif;
+        .how {
+            padding: 105px 0;
 
-    font-size: clamp(32px, 5vw, 48px);
+            background: #090909;
 
-    line-height: 1.12;
+            color: #ffffff;
+        }
 
-    font-weight: 900;
-}
+        .how .section-label {
+            color: var(--yellow-light);
+        }
 
+        .how .section-title {
+            color: #ffffff;
+        }
 
-.section-title .gold {
-    color: var(--yellow-dark);
-}
+        .how .section-description {
+            color: #aaaaaa;
+        }
 
+        .steps {
+            display: grid;
 
-.section-description {
+            grid-template-columns:
+                repeat(2, 1fr);
 
-    max-width: 750px;
+            gap: 22px;
+        }
 
-    margin:
-        0 auto 50px;
+        .step {
+            padding: 32px;
 
-    color: var(--gray);
+            border: 1px solid rgba(212,160,23,0.35);
 
-    font-size: 17px;
-}
+            border-radius: 20px;
 
+            background:
+                linear-gradient(
+                    145deg,
+                    #191919,
+                    #101010
+                );
+        }
 
-/* =========================================================
-   12 IMAGES
-========================================================= */
+        .step-number {
+            width: 50px;
+            height: 50px;
 
-.proof-grid {
+            margin-bottom: 18px;
 
-    display: grid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+            border-radius: 50%;
 
-    gap: 22px;
-}
+            background: var(--yellow);
 
+            color: #111111;
 
-.proof-card {
+            font-weight: 900;
+        }
 
-    padding: 8px;
+        .step h3 {
+            margin-bottom: 12px;
 
-    min-height: 315px;
+            font-size: 21px;
 
-    background: #FFFFFF;
+            color: #ffffff;
+        }
 
-    border:
-        2px solid
-        var(--border);
+        .step p {
+            color: #aaaaaa;
 
-    border-radius: 18px;
+            font-size: 15px;
+        }
 
-    box-shadow:
-        0 12px 35px
-        rgba(80,60,0,0.10);
+        .final-message {
+            max-width: 850px;
 
-    transition: 0.25s ease;
-}
+            margin: 50px auto 0;
 
+            padding: 35px;
 
-.proof-card:hover {
-    transform:
-        translateY(-5px);
-}
+            border: 1px solid rgba(212,160,23,0.35);
 
+            border-radius: 20px;
 
-.proof-placeholder {
+            background: #17130A;
 
-    height: 295px;
+            text-align: center;
+        }
 
-    display: flex;
+        .final-message h3 {
+            margin-bottom: 12px;
 
-    flex-direction: column;
+            font-size: 24px;
 
-    justify-content: center;
-    align-items: center;
+            color: var(--yellow-light);
+        }
 
-    text-align: center;
+        .final-message p {
+            color: #bbbbbb;
+        }
 
-    border-radius: 12px;
 
-    background:
-        linear-gradient(
-            145deg,
-            #F7E6A4,
-            #FFF8DF
-        );
+        /* ==============================
+           OFFRE
+        ============================== */
 
-    color: var(--yellow-deep);
-}
+        .offer {
+            padding: 110px 20px;
 
+            background:
+                linear-gradient(
+                    135deg,
+                    #6F4D00,
+                    #D4A017,
+                    #765100
+                );
 
-.proof-placeholder strong {
+            text-align: center;
+        }
 
-    margin-bottom: 7px;
+        .offer-box {
+            max-width: 850px;
 
-    font-family: "Montserrat", sans-serif;
+            margin: auto;
 
-    font-size: 17px;
-}
+            padding: 55px 30px;
 
+            border: 3px solid rgba(255,255,255,0.6);
 
-.proof-placeholder span {
+            border-radius: 25px;
 
-    font-size: 13px;
+            background: rgba(255,255,255,0.14);
 
-    color: #746536;
-}
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.2);
+        }
 
+        .offer-label {
+            margin-bottom: 15px;
 
-/* =========================================================
-   TÉMOIGNAGES
-========================================================= */
+            font-size: 13px;
+            font-weight: 900;
 
-.testimonials {
+            letter-spacing: 1.5px;
+        }
 
-    padding:
-        105px 0;
+        .offer h2 {
+            margin-bottom: 20px;
 
-    background: #FFFFFF;
+            font-size: clamp(30px, 5vw, 46px);
 
-    text-align: center;
-}
+            line-height: 1.15;
 
+            font-weight: 900;
+        }
 
-.testimonials-grid {
+        .old-price {
+            color: #4A3A08;
 
-    display: grid;
+            font-size: 20px;
 
-    grid-template-columns:
-        repeat(2, 1fr);
+            text-decoration: line-through;
+        }
 
-    gap: 25px;
+        .new-price {
+            margin: 10px 0 25px;
 
-    text-align: left;
-}
+            font-size: 62px;
 
+            line-height: 1;
 
-.testimonial-card {
+            font-weight: 900;
 
-    padding: 30px;
+            color: #ffffff;
+        }
 
-    background:
-        linear-gradient(
-            145deg,
-            #FFFFFF,
-            #FFF9E8
-        );
+        .offer-description {
+            max-width: 650px;
 
-    border:
-        2px solid
-        var(--border);
+            margin: 0 auto 28px;
 
-    border-radius: 20px;
+            color: #2D250F;
 
-    box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.06);
-}
+            font-size: 14px;
+        }
 
 
-.testimonial-top {
+        /* ==============================
+           MODALE
+        ============================== */
 
-    display: flex;
+        .modal {
+            position: fixed;
 
-    align-items: center;
+            inset: 0;
 
-    gap: 15px;
+            z-index: 9999;
 
-    margin-bottom: 18px;
-}
+            display: none;
 
+            align-items: center;
+            justify-content: center;
 
-.testimonial-photo {
+            padding: 20px;
 
-    width: 65px;
-    height: 65px;
+            background: rgba(0,0,0,0.85);
+        }
 
-    display: flex;
+        .modal.active {
+            display: flex;
+        }
 
-    justify-content: center;
-    align-items: center;
+        .modal-box {
+            position: relative;
 
-    border:
-        3px solid
-        var(--yellow);
+            width: 100%;
+            max-width: 500px;
 
-    border-radius: 50%;
+            padding: 45px 30px;
 
-    background:
-        #FFF2B9;
+            border: 3px solid var(--yellow);
 
-    font-size: 25px;
+            border-radius: 24px;
 
-    flex-shrink: 0;
-}
+            background:
+                linear-gradient(
+                    145deg,
+                    #1A1A1A,
+                    #080808
+                );
 
+            color: #ffffff;
 
-.testimonial-name {
+            text-align: center;
+        }
 
-    font-family: "Montserrat", sans-serif;
+        .close {
+            position: absolute;
 
-    font-size: 17px;
+            top: 8px;
+            right: 18px;
 
-    font-weight: 900;
-}
+            border: none;
 
+            background: transparent;
 
-.stars {
+            color: #aaaaaa;
 
-    color:
-        var(--yellow-dark);
+            font-size: 32px;
 
-    letter-spacing: 2px;
-}
+            cursor: pointer;
+        }
 
+        .modal-box h2 {
+            margin-bottom: 15px;
 
-.testimonial-card p {
+            font-size: 28px;
+        }
 
-    color:
-        var(--gray);
+        .modal-old {
+            color: #777777;
 
-    font-size: 15px;
-}
+            text-decoration: line-through;
 
+            font-size: 18px;
+        }
 
-/* =========================================================
-   COMMENT ÇA MARCHE — NOIR
-========================================================= */
+        .modal-price {
+            margin: 8px 0 20px;
 
-.how {
+            font-size: 48px;
 
-    padding:
-        105px 0;
+            font-weight: 900;
 
-    background:
-        #0B0B0B;
+            color: var(--yellow-light);
+        }
 
-    color: #FFFFFF;
-}
+        .modal-box p {
+            margin-bottom: 25px;
 
+            color: #aaaaaa;
 
-.how .section-title {
-    color: #FFFFFF;
-}
+            font-size: 15px;
+        }
 
+        .modal-box .btn {
+            width: 100%;
+        }
 
-.how .section-description {
-    color: #AAAAAA;
-}
 
+        /* ==============================
+           FOOTER
+        ============================== */
 
-.steps {
+        footer {
+            padding: 40px 20px;
 
-    display: grid;
+            background:
+                linear-gradient(
+                    135deg,
+                    #6F4D00,
+                    #D4A017,
+                    #765100
+                );
 
-    grid-template-columns:
-        repeat(2, 1fr);
+            color: #111111;
 
-    gap: 22px;
-}
+            text-align: center;
 
+            font-size: 13px;
 
-.step {
+            font-weight: 700;
+        }
 
-    padding: 32px;
+        .footer-brand {
+            margin-bottom: 8px;
 
-    border:
-        1px solid
-        rgba(212,160,23,0.35);
+            font-size: 20px;
 
-    border-radius: 20px;
+            font-weight: 900;
+        }
 
-    background:
-        linear-gradient(
-            145deg,
-            #181818,
-            #101010
-        );
-}
 
+        /* ==============================
+           MOBILE
+        ============================== */
 
-.step-number {
+        @media (max-width: 850px) {
 
-    width: 50px;
-    height: 50px;
+            .proof-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
 
-    margin-bottom: 18px;
+            .steps {
+                grid-template-columns: 1fr;
+            }
 
-    display: flex;
+        }
 
-    justify-content: center;
-    align-items: center;
 
-    border-radius: 50%;
+        @media (max-width: 600px) {
 
-    background:
-        var(--yellow);
+            .hero {
+                padding:
+                    120px 15px
+                    65px;
+            }
 
-    color: #111111;
+            .hero h1 {
+                font-size: 40px;
+            }
 
-    font-weight: 900;
-}
+            .hero-subtitle {
+                font-size: 17px;
+            }
 
+            .main-video {
+                min-height: 300px;
+            }
 
-.step h3 {
+            .video-placeholder {
+                min-height: 300px;
+            }
 
-    margin-bottom: 12px;
+            .proof-grid {
+                grid-template-columns: 1fr;
+            }
 
-    font-family: "Montserrat", sans-serif;
+            .proof-card img {
+                height: auto;
+                max-height: 550px;
+                object-fit: contain;
+            }
 
-    color: #FFFFFF;
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
 
-    font-size: 21px;
-}
+            .new-price {
+                font-size: 48px;
+            }
 
+            .btn {
+                width: 100%;
+            }
 
-.step p {
+        }
 
-    color: #AAAAAA;
+    </style>
 
-    font-size: 15px;
-}
-
-
-.final-message {
-
-    max-width: 850px;
-
-    margin:
-        50px auto 0;
-
-    padding: 35px;
-
-    border:
-        1px solid
-        rgba(212,160,23,0.35);
-
-    border-radius: 20px;
-
-    background:
-        #17130A;
-
-    text-align: center;
-}
-
-
-.final-message h3 {
-
-    margin-bottom: 12px;
-
-    color: var(--yellow-light);
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 24px;
-}
-
-
-.final-message p {
-    color: #BBBBBB;
-}
-
-
-/* =========================================================
-   OFFRE — JAUNE FONCÉ
-========================================================= */
-
-.offer {
-
-    padding:
-        110px 20px;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #A87800,
-            #D4A017,
-            #A87800
-        );
-
-    text-align: center;
-}
-
-
-.offer-box {
-
-    max-width: 850px;
-
-    margin: auto;
-
-    padding:
-        55px 30px;
-
-    border:
-        3px solid
-        rgba(255,255,255,0.55);
-
-    border-radius: 25px;
-
-    background:
-        rgba(255,255,255,0.14);
-
-    backdrop-filter:
-        blur(8px);
-
-    box-shadow:
-        0 25px 70px
-        rgba(0,0,0,0.20);
-}
-
-
-.offer-label {
-
-    margin-bottom: 15px;
-
-    color: #111111;
-
-    font-size: 13px;
-    font-weight: 900;
-
-    letter-spacing: 1.5px;
-}
-
-
-.offer h2 {
-
-    margin-bottom: 20px;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: clamp(30px, 5vw, 45px);
-
-    line-height: 1.15;
-
-    font-weight: 900;
-
-    color: #111111;
-}
-
-
-.old-price {
-
-    color: #4A3A08;
-
-    font-size: 20px;
-
-    text-decoration:
-        line-through;
-}
-
-
-.new-price {
-
-    margin:
-        5px 0 25px;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 62px;
-
-    line-height: 1;
-
-    font-weight: 900;
-
-    color: #FFFFFF;
-
-    text-shadow:
-        0 3px 15px
-        rgba(0,0,0,0.15);
-}
-
-
-.offer-description {
-
-    max-width: 650px;
-
-    margin:
-        0 auto 28px;
-
-    color: #2D250F;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   MODAL
-========================================================= */
-
-.modal {
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 9999;
-
-    display: none;
-
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px;
-
-    background:
-        rgba(0,0,0,0.82);
-}
-
-
-.modal.active {
-    display: flex;
-}
-
-
-.modal-box {
-
-    position: relative;
-
-    width: 100%;
-
-    max-width: 510px;
-
-    padding:
-        45px 30px;
-
-    border:
-        3px solid
-        var(--yellow);
-
-    border-radius: 24px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #1A1A1A,
-            #080808
-        );
-
-    color: #FFFFFF;
-
-    text-align: center;
-}
-
-
-.close {
-
-    position: absolute;
-
-    top: 10px;
-    right: 18px;
-
-    border: none;
-
-    background: transparent;
-
-    color: #AAAAAA;
-
-    font-size: 30px;
-
-    cursor: pointer;
-}
-
-
-.modal-box h2 {
-
-    margin-bottom: 15px;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 29px;
-}
-
-
-.modal-old {
-
-    color: #777777;
-
-    text-decoration:
-        line-through;
-
-    font-size: 18px;
-}
-
-
-.modal-price {
-
-    margin:
-        6px 0 20px;
-
-    color:
-        var(--yellow-light);
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 48px;
-
-    font-weight: 900;
-}
-
-
-.modal-box p {
-
-    margin-bottom: 25px;
-
-    color: #AAAAAA;
-
-    font-size: 15px;
-}
-
-
-.modal-box .btn {
-    width: 100%;
-}
-
-
-/* =========================================================
-   FOOTER — JAUNE FONCÉ
-========================================================= */
-
-footer {
-
-    padding:
-        35px 20px;
-
-    background:
-        #A87800;
-
-    color: #111111;
-
-    text-align: center;
-
-    font-size: 13px;
-
-    font-weight: 700;
-}
-
-
-.footer-brand {
-
-    margin-bottom: 8px;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 20px;
-
-    font-weight: 900;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 850px) {
-
-    .proof-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .steps {
-        grid-template-columns:
-            1fr;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .hero {
-        padding:
-            120px 15px
-            65px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero-subtitle {
-        font-size: 17px;
-    }
-
-    .main-video,
-    .video-placeholder {
-        min-height: 300px;
-    }
-
-    .proof-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .testimonials-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .new-price {
-        font-size: 48px;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-}
-
-</style>
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================
      HEADER
-===================================================== -->
+========================================= -->
 
 <header>
 
-    <div class="container">
-
-        <div class="logo">
-
-            BINANCE
-            <span>BOOSTER™</span>
-
-        </div>
-
+    <div class="logo">
+        BINANCE <span>BOOSTER™</span>
     </div>
 
 </header>
 
 
-
-<!-- =====================================================
+<!-- =========================================
      HERO
-===================================================== -->
+========================================= -->
 
 <section class="hero">
 
     <div class="hero-content">
 
-
         <div class="badge">
-            ✦ FORMATION PREMIUM
+            ✦ BINANCE BOOSTER™
         </div>
-
 
         <div class="starting-price">
-
-            AVEC SEULEMENT 5.789 FCFA 👇
-
+            Avec seulement 5.789 FCFA 👇
         </div>
-
 
         <h1>
 
@@ -1193,21 +903,16 @@ footer {
 
         </h1>
 
-
         <p class="hero-subtitle">
-
-            Grâce à Binance depuis ton téléphone.
-
+            Grâce à Binance depuis ton téléphone
         </p>
-
 
         <p class="audio-note">
-
-            🔊 Appuie sur l'icône du son sur la vidéo
-            pour activer l'audio.
-
+            👇 Appuie sur l'icône du son sur la vidéo pour activer l'audio
         </p>
 
+
+        <!-- VIDEO -->
 
         <div class="main-video">
 
@@ -1222,7 +927,7 @@ footer {
                 </h3>
 
                 <p>
-                    Ajoute ta vidéo ici.
+                    Ta vidéo sera ajoutée ici.
                 </p>
 
             </div>
@@ -1243,10 +948,9 @@ footer {
 </section>
 
 
-
-<!-- =====================================================
-     12 PREUVES
-===================================================== -->
+<!-- =========================================
+     PREUVES
+========================================= -->
 
 <section
     class="proof-section"
@@ -1254,127 +958,130 @@ footer {
 
     <div class="container">
 
-
         <span class="section-label">
-            LES PREUVES
+            PREUVES
         </span>
-
 
         <h2 class="section-title">
 
             Les hommes mentent,
-            <span class="gold">
-                mais pas les chiffres 👇…
-            </span>
+            mais pas les chiffres 👇…
 
         </h2>
-
-
-        <p class="section-description">
-
-            Ajoute ici tes véritables captures,
-            résultats ou éléments de preuve.
-
-        </p>
 
 
         <div class="proof-grid">
 
 
+            <!-- PREUVE 1 -->
+
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 01</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3715.png"
+                    alt="Preuve Binance Booster 1">
+
             </div>
 
 
+            <!-- PREUVE 2 -->
+
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 02</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3716.png"
+                    alt="Preuve Binance Booster 2">
+
             </div>
 
 
+            <!-- PREUVE 3 -->
+
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 03</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3717.png"
+                    alt="Preuve Binance Booster 3">
+
             </div>
 
 
+            <!-- PREUVE 4 -->
+
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 04</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3718.png"
+                    alt="Preuve Binance Booster 4">
+
             </div>
 
 
+            <!-- PREUVE 5 -->
+
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 05</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3719.png"
+                    alt="Preuve Binance Booster 5">
+
             </div>
 
 
+            <!-- PREUVE 6 -->
+
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 06</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3720.png"
+                    alt="Preuve Binance Booster 6">
+
             </div>
 
 
+            <!-- PREUVE 7 -->
+
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 07</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3721.png"
+                    alt="Preuve Binance Booster 7">
+
             </div>
 
 
+            <!-- PREUVE 8 -->
+
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 08</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3722.png"
+                    alt="Preuve Binance Booster 8">
+
             </div>
 
 
+            <!-- PREUVE 9 -->
+
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 09</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3723.png"
+                    alt="Preuve Binance Booster 9">
+
             </div>
 
 
-            <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 10</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
-            </div>
-
+            <!-- PREUVE 10 -->
 
             <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 11</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
+
+                <img
+                    src="photos/IMG_3724.png"
+                    alt="Preuve Binance Booster 10">
+
             </div>
 
-
-            <div class="proof-card">
-                <div class="proof-placeholder">
-                    <strong>📸 PREUVE 12</strong>
-                    <span>Ajoute ton image ici</span>
-                </div>
-            </div>
 
         </div>
 
@@ -1383,20 +1090,17 @@ footer {
 </section>
 
 
-
-<!-- =====================================================
-     6 TÉMOIGNAGES
-===================================================== -->
+<!-- =========================================
+     TEMOIGNAGES
+========================================= -->
 
 <section class="testimonials">
 
     <div class="container">
 
-
         <span class="section-label">
             ⭐ TÉMOIGNAGES
         </span>
-
 
         <h2 class="section-title">
 
@@ -1405,11 +1109,10 @@ footer {
 
         </h2>
 
-
         <p class="section-description">
 
-            Ajoute ici les véritables témoignages
-            de tes élèves.
+            Découvrez les retours d'expérience
+            des participants de Binance Booster™.
 
         </p>
 
@@ -1417,184 +1120,27 @@ footer {
         <div class="testimonials-grid">
 
 
+            <!-- TEMOIGNAGE 1 -->
+
             <div class="testimonial-card">
 
-                <div class="testimonial-top">
-
-                    <div class="testimonial-photo">
-                        👤
-                    </div>
-
-                    <div>
-
-                        <div class="testimonial-name">
-                            Élève 01
-                        </div>
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <p>
-                    Ajoute ici le témoignage réel
-                    de ton premier élève.
-                </p>
+                <img
+                    src="photos/IMG_3702.jpeg"
+                    alt="Témoignage Binance Booster 1">
 
             </div>
 
 
-            <div class="testimonial-card">
-
-                <div class="testimonial-top">
-
-                    <div class="testimonial-photo">
-                        👤
-                    </div>
-
-                    <div>
-
-                        <div class="testimonial-name">
-                            Élève 02
-                        </div>
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <p>
-                    Ajoute ici le témoignage réel
-                    de ton deuxième élève.
-                </p>
-
-            </div>
-
+            <!-- TEMOIGNAGE 2 -->
 
             <div class="testimonial-card">
 
-                <div class="testimonial-top">
-
-                    <div class="testimonial-photo">
-                        👤
-                    </div>
-
-                    <div>
-
-                        <div class="testimonial-name">
-                            Élève 03
-                        </div>
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <p>
-                    Ajoute ici le témoignage réel
-                    de ton troisième élève.
-                </p>
+                <img
+                    src="photos/IMG_3713.png"
+                    alt="Témoignage Binance Booster 2">
 
             </div>
 
-
-            <div class="testimonial-card">
-
-                <div class="testimonial-top">
-
-                    <div class="testimonial-photo">
-                        👤
-                    </div>
-
-                    <div>
-
-                        <div class="testimonial-name">
-                            Élève 04
-                        </div>
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <p>
-                    Ajoute ici le témoignage réel
-                    de ton quatrième élève.
-                </p>
-
-            </div>
-
-
-            <div class="testimonial-card">
-
-                <div class="testimonial-top">
-
-                    <div class="testimonial-photo">
-                        👤
-                    </div>
-
-                    <div>
-
-                        <div class="testimonial-name">
-                            Élève 05
-                        </div>
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <p>
-                    Ajoute ici le témoignage réel
-                    de ton cinquième élève.
-                </p>
-
-            </div>
-
-
-            <div class="testimonial-card">
-
-                <div class="testimonial-top">
-
-                    <div class="testimonial-photo">
-                        👤
-                    </div>
-
-                    <div>
-
-                        <div class="testimonial-name">
-                            Élève 06
-                        </div>
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <p>
-                    Ajoute ici le témoignage réel
-                    de ton sixième élève.
-                </p>
-
-            </div>
 
         </div>
 
@@ -1603,20 +1149,17 @@ footer {
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================================
      COMMENT ÇA MARCHE
-===================================================== -->
+========================================= -->
 
 <section class="how">
 
     <div class="container">
 
-
         <span class="section-label">
             BINANCE BOOSTER™
         </span>
-
 
         <h2 class="section-title">
 
@@ -1625,17 +1168,18 @@ footer {
 
         </h2>
 
-
         <p class="section-description">
 
-            Une méthode progressive pour apprendre,
-            pratiquer et mieux utiliser Binance.
+            Découvre progressivement les principales
+            étapes du programme.
 
         </p>
 
 
         <div class="steps">
 
+
+            <!-- ETAPE 1 -->
 
             <div class="step">
 
@@ -1663,6 +1207,8 @@ footer {
             </div>
 
 
+            <!-- ETAPE 2 -->
+
             <div class="step">
 
                 <div class="step-number">
@@ -1679,14 +1225,15 @@ footer {
                     des méthodes adaptées à différents niveaux
                     de budget.
 
-                    Tu apprends à comprendre les mécanismes
-                    d'achat et de vente ainsi que les fonctions
-                    de base.
+                    Tu apprends notamment les mécanismes
+                    d'achat et de vente et les fonctions de base.
 
                 </p>
 
             </div>
 
+
+            <!-- ETAPE 3 -->
 
             <div class="step">
 
@@ -1695,20 +1242,22 @@ footer {
                 </div>
 
                 <h3>
-                    Découvre les fonctions avancées de Binance
+                    Découvre les fonctions avancées
                 </h3>
 
                 <p>
 
-                    Explore des fonctionnalités comme le
-                    staking, Binance Earn, Launchpool,
-                    le cashback et d'autres possibilités
-                    disponibles selon les conditions de Binance.
+                    Explore différentes fonctionnalités de
+                    l'écosystème Binance, notamment Earn,
+                    staking et Launchpool, selon leur disponibilité
+                    et les conditions applicables.
 
                 </p>
 
             </div>
 
+
+            <!-- ETAPE 4 -->
 
             <div class="step">
 
@@ -1723,17 +1272,18 @@ footer {
                 <p>
 
                     Tu apprends à gérer ton capital avec méthode,
-                    à protéger tes bénéfices et à réduire les
-                    risques.
+                    à protéger tes bénéfices et à mieux maîtriser
+                    les risques.
 
-                    L'objectif est d'avancer avec une approche
-                    claire plutôt que de prendre des décisions
+                    L'objectif est d'éviter les décisions
                     impulsives.
 
                 </p>
 
             </div>
 
+
+            <!-- ETAPE 5 -->
 
             <div class="step">
 
@@ -1747,16 +1297,17 @@ footer {
 
                 <p>
 
-                    Tu appliques progressivement la méthode et
-                    analyses tes résultats.
+                    Tu analyses tes résultats et progresses
+                    étape par étape.
 
-                    Ensuite, tu peux adapter ton capital et tes
-                    stratégies selon ta situation et ton niveau
-                    de risque.
+                    Tu peux ensuite adapter tes stratégies
+                    et ton capital selon ta situation et ton
+                    niveau de risque.
 
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1782,20 +1333,17 @@ footer {
 </section>
 
 
-
-<!-- =====================================================
-     OFFRE — JAUNE FONCÉ
-===================================================== -->
+<!-- =========================================
+     OFFRE
+========================================= -->
 
 <section class="offer">
 
     <div class="offer-box">
 
-
         <div class="offer-label">
             🔥 OFFRE SPÉCIALE
         </div>
-
 
         <h2>
 
@@ -1804,21 +1352,18 @@ footer {
 
         </h2>
 
-
         <div class="old-price">
             107.789 FCFA
         </div>
-
 
         <div class="new-price">
             5.789 FCFA
         </div>
 
-
         <p class="offer-description">
 
-            Profite de l'offre actuelle et découvre
-            le programme Binance Booster™.
+            Profite de l'offre actuelle pour accéder
+            au programme Binance Booster™.
 
             Les résultats peuvent varier selon le capital,
             les compétences, les conditions du marché
@@ -1831,7 +1376,7 @@ footer {
             class="btn"
             onclick="openModal()">
 
-            ✦ PROFITER DE L'OFFRE MAINTENANT
+            PROFITER DE L'OFFRE MAINTENANT
 
         </button>
 
@@ -1840,10 +1385,9 @@ footer {
 </section>
 
 
-
-<!-- =====================================================
-     POP-UP
-===================================================== -->
+<!-- =========================================
+     FENÊTRE DE L'OFFRE
+========================================= -->
 
 <div
     class="modal"
@@ -1851,7 +1395,6 @@ footer {
     onclick="closeOutside(event)">
 
     <div class="modal-box">
-
 
         <button
             class="close"
@@ -1862,13 +1405,8 @@ footer {
         </button>
 
 
-        <div class="offer-label">
-            OFFRE BINANCE BOOSTER™
-        </div>
-
-
         <h2>
-            Profite de l'offre maintenant
+            Profiter de l'offre maintenant
         </h2>
 
 
@@ -1885,19 +1423,21 @@ footer {
         <p>
 
             Accède à Binance Booster™
-            et commence ton parcours
-            de formation.
+            et commence ton parcours de formation.
 
         </p>
 
 
-        <!-- REMPLACER # PAR TON LIEN DE PAIEMENT -->
+        <!--
+        REMPLACE LE # PAR TON VRAI
+        LIEN DE PAIEMENT
+        -->
 
         <a
             href="#"
             class="btn">
 
-            💳 PROFITER DE L'OFFRE À 5.789 FCFA
+            💳 PAYER 5.789 FCFA
 
         </a>
 
@@ -1906,10 +1446,9 @@ footer {
 </div>
 
 
-
-<!-- =====================================================
-     FOOTER — JAUNE FONCÉ
-===================================================== -->
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
@@ -1922,52 +1461,36 @@ footer {
 </footer>
 
 
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
 
 <script>
 
-/* =========================================================
-   POP-UP
-========================================================= */
+    function openModal() {
 
-function openModal() {
-
-    document
-        .getElementById("offerModal")
-        .classList
-        .add("active");
-
-}
-
-
-function closeModal() {
-
-    document
-        .getElementById("offerModal")
-        .classList
-        .remove("active");
-
-}
-
-
-function closeOutside(event) {
-
-    if (
-        event.target.id === "offerModal"
-    ) {
-
-        closeModal();
+        document
+            .getElementById("offerModal")
+            .classList
+            .add("active");
 
     }
 
-}
+
+    function closeModal() {
+
+        document
+            .getElementById("offerModal")
+            .classList
+            .remove("active");
+
+    }
 
 
-document.addEventListener(
-    "keydown",
-    function(event) {
+    function closeOutside(event) {
 
         if (
-            event.key === "Escape"
+            event.target.id === "offerModal"
         ) {
 
             closeModal();
@@ -1975,10 +1498,26 @@ document.addEventListener(
         }
 
     }
-);
+
+
+    document.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeModal();
+
+            }
+
+        }
+    );
 
 </script>
 
 
 </body>
+
 </html>
