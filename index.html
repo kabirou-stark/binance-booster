@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Binance Booster</title>
+    <title>Binance Booster™ | Formation</title>
+
+    <meta name="description"
+          content="Binance Booster™ : une formation en ligne pour développer ses compétences et son activité depuis l'Afrique.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -18,321 +22,540 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
             color: #111111;
+            line-height: 1.6;
         }
 
         /* =========================
-           SECTION 1 — HERO
+           HERO
         ========================= */
 
         .hero {
             min-height: 100vh;
+            padding: 70px 20px 90px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #fffdf5, #ffffff);
+            text-align: center;
+            background:
+                radial-gradient(circle at top, #fff8dc 0%, #ffffff 55%);
         }
 
         .hero-content {
-            max-width: 900px;
-            text-align: center;
+            width: 100%;
+            max-width: 1050px;
+            margin: auto;
         }
 
-        .badge {
+        .brand {
             display: inline-block;
-            padding: 10px 18px;
-            border-radius: 30px;
-            background: #fff3c4;
-            color: #b88600;
-            font-weight: bold;
             margin-bottom: 25px;
+            padding: 9px 18px;
+            border-radius: 50px;
+            background: #fff3c4;
+            color: #a97900;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: .5px;
         }
 
-        h1 {
-            font-size: 56px;
-            line-height: 1.1;
-            margin-bottom: 20px;
+        .hero h1 {
+            max-width: 950px;
+            margin: 0 auto 25px;
+            font-size: 58px;
+            line-height: 1.08;
+            font-weight: 800;
         }
 
-        h1 span {
-            color: #f3ba00;
+        .hero h1 span {
+            color: #e6ad00;
         }
 
-        .subtitle {
-            font-size: 21px;
-            line-height: 1.6;
+        .hero-description {
+            max-width: 780px;
+            margin: 0 auto 25px;
             color: #555555;
-            max-width: 700px;
-            margin: 0 auto 35px;
+            font-size: 20px;
+            line-height: 1.7;
         }
+
+        .audio-note {
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: #333333;
+        }
+
+        /* =========================
+           VIDEO PRINCIPALE
+        ========================= */
+
+        .main-video {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto 35px;
+            background: #111111;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 20px 55px rgba(0,0,0,.18);
+        }
+
+        .main-video video {
+            width: 100%;
+            display: block;
+            max-height: 650px;
+            background: #000000;
+        }
+
+        .video-placeholder {
+            padding: 90px 25px;
+            color: #ffffff;
+        }
+
+        .video-placeholder .play {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .video-placeholder h3 {
+            margin-bottom: 8px;
+            font-size: 24px;
+        }
+
+        .video-placeholder p {
+            color: #dddddd;
+        }
+
+        /* =========================
+           BOUTON
+        ========================= */
 
         .button {
             display: inline-block;
-            padding: 16px 32px;
+            padding: 17px 34px;
+            border-radius: 12px;
             background: #f3ba00;
             color: #111111;
             text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
             font-size: 18px;
-            transition: 0.3s;
+            font-weight: 800;
+            transition: .25s ease;
         }
 
         .button:hover {
             transform: translateY(-3px);
-            background: #e0a900;
-        }
-
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 55px;
-        }
-
-        .feature {
-            width: 220px;
-            padding: 22px;
-            border-radius: 15px;
-            background: white;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        .feature h3 {
-            margin-bottom: 8px;
-        }
-
-        .feature p {
-            color: #666666;
-            font-size: 14px;
-            line-height: 1.5;
+            background: #dfa900;
         }
 
         /* =========================
-           SECTION 2 — À PROPOS
+           SECTION PREUVES
         ========================= */
 
-        .about {
+        .proof {
             padding: 100px 20px;
-            background: #ffffff;
+            background: #fffdf5;
+            text-align: center;
         }
 
-        .about-content {
+        .container {
+            width: 100%;
             max-width: 1100px;
             margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 70px;
-        }
-
-        .about-text {
-            flex: 1;
         }
 
         .section-badge {
             display: inline-block;
-            color: #b88600;
+            margin-bottom: 15px;
+            color: #a97900;
+            font-weight: 800;
             font-size: 14px;
-            font-weight: bold;
+            letter-spacing: .5px;
+        }
+
+        .section-title {
+            font-size: 46px;
+            line-height: 1.15;
             margin-bottom: 18px;
         }
 
-        .about h2 {
-            font-size: 44px;
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
-
-        .about-text > p {
+        .section-description {
+            max-width: 720px;
+            margin: 0 auto 50px;
             color: #666666;
             font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 35px;
         }
 
-        .about-items {
-            display: flex;
-            flex-direction: column;
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        .about-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
+        .proof-card {
+            padding: 35px 25px;
+            background: #ffffff;
+            border: 1px solid #f0e2ad;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0,0,0,.06);
         }
 
-        .icon {
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff4c9;
-            border-radius: 12px;
-            font-size: 22px;
-            flex-shrink: 0;
+        .proof-number {
+            display: block;
+            margin-bottom: 8px;
+            color: #e0a900;
+            font-size: 38px;
+            font-weight: 900;
         }
 
-        .about-item h3 {
-            margin-bottom: 6px;
-            font-size: 18px;
+        .proof-card h3 {
+            font-size: 19px;
+            margin-bottom: 8px;
         }
 
-        .about-item p {
+        .proof-card p {
             color: #777777;
-            line-height: 1.5;
-        }
-
-        .about-card {
-            width: 350px;
-            padding: 45px 35px;
-            text-align: center;
-            border-radius: 25px;
-            background: linear-gradient(145deg, #fff8dc, #ffffff);
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
-            border: 1px solid #f3e6b0;
-        }
-
-        .card-icon {
-            font-size: 55px;
-            margin-bottom: 20px;
-        }
-
-        .about-card h3 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .about-card p {
-            color: #666666;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .card-line {
-            width: 60px;
-            height: 3px;
-            background: #f3ba00;
-            margin: 0 auto 25px;
-        }
-
-        .about-card strong {
-            font-size: 17px;
+            font-size: 15px;
         }
 
         /* =========================
-           RESPONSIVE MOBILE
+           PREUVES VISUELLES
         ========================= */
 
-        @media (max-width: 800px) {
+        .evidence {
+            padding: 100px 20px;
+            background: #ffffff;
+            text-align: center;
+        }
 
-            .hero {
-                min-height: auto;
-                padding: 80px 20px;
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 45px;
+        }
+
+        .evidence-card {
+            min-height: 250px;
+            padding: 25px;
+            border-radius: 18px;
+            background: #f8f8f8;
+            border: 1px solid #eeeeee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .evidence-card img {
+            width: 100%;
+            height: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .evidence-placeholder {
+            color: #777777;
+        }
+
+        .evidence-placeholder strong {
+            display: block;
+            color: #222222;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        /* =========================
+           TÉMOIGNAGES
+        ========================= */
+
+        .testimonials {
+            padding: 100px 20px;
+            background: #fffdf5;
+            text-align: center;
+        }
+
+        .testimonials-intro {
+            max-width: 720px;
+            margin: 0 auto 50px;
+            color: #666666;
+            font-size: 18px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonial {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 12px 35px rgba(0,0,0,.08);
+            text-align: left;
+        }
+
+        .testimonial video {
+            width: 100%;
+            display: block;
+            border-radius: 14px;
+            background: #000000;
+        }
+
+        .testimonial h3 {
+            padding: 18px 5px 5px;
+            font-size: 18px;
+        }
+
+        .testimonial p {
+            padding: 0 5px 10px;
+            color: #777777;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 100px 20px;
+            text-align: center;
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .cta h2 {
+            max-width: 750px;
+            margin: 0 auto 20px;
+            font-size: 44px;
+            line-height: 1.2;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #cccccc;
+            font-size: 18px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 25px 20px;
+            background: #090909;
+            color: #888888;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .hero h1 {
+                font-size: 44px;
             }
 
-            h1 {
-                font-size: 40px;
-            }
-
-            .subtitle {
-                font-size: 18px;
-            }
-
-            .about-content {
-                flex-direction: column;
-                gap: 45px;
-            }
-
-            .about h2 {
+            .section-title {
                 font-size: 36px;
             }
 
-            .about-card {
-                width: 100%;
-                max-width: 400px;
+            .proof-grid,
+            .evidence-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta h2 {
+                font-size: 36px;
             }
         }
 
         @media (max-width: 500px) {
 
-            h1 {
+            .hero {
+                padding: 55px 15px 70px;
+            }
+
+            .hero h1 {
                 font-size: 34px;
             }
 
-            .features {
-                flex-direction: column;
-                align-items: center;
+            .hero-description {
+                font-size: 17px;
             }
 
-            .feature {
+            .section-title {
+                font-size: 31px;
+            }
+
+            .proof,
+            .evidence,
+            .testimonials,
+            .cta {
+                padding: 70px 15px;
+            }
+
+            .button {
                 width: 100%;
-                max-width: 320px;
-            }
-
-            .about {
-                padding: 70px 20px;
+                max-width: 350px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
     <!-- =========================
-         SECTION 1 — HERO
+         1. HERO
     ========================= -->
 
     <section class="hero">
 
         <div class="hero-content">
 
-            <div class="badge">
-                🚀 BINANCE BOOSTER
+            <div class="brand">
+                🚀 BINANCE BOOSTER™
             </div>
 
             <h1>
-                Développez votre présence avec
-                <span>Binance Booster</span>
+                Gagnez jusqu'à
+                <span>150.000 F CFA / mois</span>
+                avec Binance depuis votre téléphone
             </h1>
 
-            <p class="subtitle">
-                Une solution moderne pour présenter votre projet,
-                développer votre communauté et transformer vos visiteurs
-                en utilisateurs.
+            <p class="hero-description">
+                Découvrez une méthode structurée pour développer vos
+                compétences et votre activité en ligne depuis l'Afrique,
+                sans dépendre uniquement des mouvements du marché.
             </p>
 
-            <a href="#about" class="button">
-                Commencer maintenant →
+            <p class="audio-note">
+                🔊 Appuie sur l'icône du son sur la vidéo pour activer l'audio
+            </p>
+
+
+            <div class="main-video">
+
+                <!--
+                    Quand tu auras ta vraie vidéo,
+                    remplace la vidéo ci-dessous par ton fichier.
+                -->
+
+                <div class="video-placeholder">
+
+                    <div class="play">
+                        ▶️
+                    </div>
+
+                    <h3>
+                        Votre vidéo de présentation
+                    </h3>
+
+                    <p>
+                        La vidéo sera ajoutée ici.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a href="#temoignages" class="button">
+                Voir les témoignages ↓
             </a>
 
-            <div class="features">
+        </div>
 
-                <div class="feature">
-                    <h3>⚡ Simple</h3>
+    </section>
+
+
+    <!-- =========================
+         2. LES CHIFFRES
+    ========================= -->
+
+    <section class="proof">
+
+        <div class="container">
+
+            <span class="section-badge">
+                📊 LES CHIFFRES
+            </span>
+
+            <h2 class="section-title">
+                Les hommes mentent, mais pas les chiffres.
+            </h2>
+
+            <p class="section-description">
+                Découvrez les éléments de preuve, les résultats présentés
+                et les informations disponibles autour de la formation.
+            </p>
+
+
+            <div class="proof-grid">
+
+                <div class="proof-card">
+
+                    <span class="proof-number">
+                        150K+
+                    </span>
+
+                    <h3>
+                        F CFA
+                    </h3>
+
                     <p>
-                        Une expérience claire et facile à utiliser.
+                        Objectif de revenus mensuels présenté dans
+                        l'offre, selon les résultats et la situation
+                        de chaque participant.
                     </p>
+
                 </div>
 
-                <div class="feature">
-                    <h3>🚀 Rapide</h3>
+
+                <div class="proof-card">
+
+                    <span class="proof-number">
+                        25
+                    </span>
+
+                    <h3>
+                        Modules
+                    </h3>
+
                     <p>
-                        Une présentation moderne et performante.
+                        Un parcours structuré pour progresser
+                        étape par étape.
                     </p>
+
                 </div>
 
-                <div class="feature">
-                    <h3>💎 Premium</h3>
+
+                <div class="proof-card">
+
+                    <span class="proof-number">
+                        100%
+                    </span>
+
+                    <h3>
+                        En ligne
+                    </h3>
+
                     <p>
-                        Un design professionnel pour inspirer confiance.
+                        Accédez à la formation depuis votre téléphone
+                        ou votre ordinateur.
                     </p>
+
                 </div>
 
             </div>
@@ -343,122 +566,207 @@
 
 
     <!-- =========================
-         SECTION 2 — POURQUOI
-         BINANCE BOOSTER
+         3. PREUVES
     ========================= -->
 
-    <section class="about" id="about">
+    <section class="evidence">
 
-        <div class="about-content">
+        <div class="container">
 
-            <div class="about-text">
+            <span class="section-badge">
+                🔎 PREUVES
+            </span>
 
-                <span class="section-badge">
-                    ✨ POURQUOI BINANCE BOOSTER ?
-                </span>
+            <h2 class="section-title">
+                Découvrez les preuves
+            </h2>
 
-                <h2>
-                    Passez à un niveau supérieur
-                </h2>
-
-                <p>
-                    Binance Booster vous aide à présenter votre projet
-                    de manière professionnelle et à créer une expérience
-                    qui donne envie aux visiteurs d'aller plus loin.
-                </p>
-
-                <div class="about-items">
-
-                    <div class="about-item">
-
-                        <div class="icon">
-                            🎯
-                        </div>
-
-                        <div>
-                            <h3>
-                                Une présentation claire
-                            </h3>
-
-                            <p>
-                                Présentez votre projet avec un message
-                                simple, moderne et facile à comprendre.
-                            </p>
-                        </div>
-
-                    </div>
+            <p class="section-description">
+                Les captures et résultats présentés ici doivent
+                correspondre à de véritables données ou témoignages.
+            </p>
 
 
-                    <div class="about-item">
+            <div class="evidence-grid">
 
-                        <div class="icon">
-                            📈
-                        </div>
+                <div class="evidence-card">
 
-                        <div>
-                            <h3>
-                                Développez votre audience
-                            </h3>
+                    <div class="evidence-placeholder">
 
-                            <p>
-                                Transformez davantage de visiteurs
-                                en membres de votre communauté.
-                            </p>
-                        </div>
+                        <strong>
+                            📸 Preuve 01
+                        </strong>
 
-                    </div>
-
-
-                    <div class="about-item">
-
-                        <div class="icon">
-                            💎
-                        </div>
-
-                        <div>
-                            <h3>
-                                Une image professionnelle
-                            </h3>
-
-                            <p>
-                                Donnez à votre projet une identité moderne,
-                                sérieuse et inspirante.
-                            </p>
-                        </div>
+                        Ajoute ici ta première capture
+                        de résultat réelle.
 
                     </div>
 
                 </div>
 
-            </div>
 
+                <div class="evidence-card">
 
-            <div class="about-card">
+                    <div class="evidence-placeholder">
 
-                <div class="card-icon">
-                    🚀
+                        <strong>
+                            📸 Preuve 02
+                        </strong>
+
+                        Ajoute ici ta deuxième capture
+                        de résultat réelle.
+
+                    </div>
+
                 </div>
 
-                <h3>
-                    Binance Booster
-                </h3>
 
-                <p>
-                    Une expérience pensée pour attirer,
-                    convaincre et convertir.
-                </p>
+                <div class="evidence-card">
 
-                <div class="card-line"></div>
+                    <div class="evidence-placeholder">
 
-                <strong>
-                    Boostez votre présence.
-                </strong>
+                        <strong>
+                            📸 Preuve 03
+                        </strong>
+
+                        Ajoute ici ta troisième capture
+                        de résultat réelle.
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
     </section>
+
+
+    <!-- =========================
+         4. TÉMOIGNAGES VIDÉO
+    ========================= -->
+
+    <section class="testimonials" id="temoignages">
+
+        <div class="container">
+
+            <span class="section-badge">
+                ⭐ TÉMOIGNAGES
+            </span>
+
+            <h2 class="section-title">
+                Voici ce que pensent les élèves de cette formation…
+            </h2>
+
+            <p class="testimonials-intro">
+                Découvrez leurs expériences et leurs retours
+                à travers plusieurs témoignages vidéo.
+            </p>
+
+
+            <div class="testimonials-grid">
+
+
+                <div class="testimonial">
+
+                    <video controls playsinline>
+                        <source
+                            src="temoignage-1.mp4"
+                            type="video/mp4">
+                    </video>
+
+                    <h3>
+                        Témoignage 01
+                    </h3>
+
+                    <p>
+                        Retour d'expérience d'un participant.
+                    </p>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <video controls playsinline>
+                        <source
+                            src="temoignage-2.mp4"
+                            type="video/mp4">
+                    </video>
+
+                    <h3>
+                        Témoignage 02
+                    </h3>
+
+                    <p>
+                        Retour d'expérience d'un participant.
+                    </p>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <video controls playsinline>
+                        <source
+                            src="temoignage-3.mp4"
+                            type="video/mp4">
+                    </video>
+
+                    <h3>
+                        Témoignage 03
+                    </h3>
+
+                    <p>
+                        Retour d'expérience d'un participant.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         5. APPEL À L'ACTION
+    ========================= -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+                Prêt à découvrir Binance Booster™ ?
+            </h2>
+
+            <p>
+                Découvrez le programme complet et commencez
+                votre parcours dès maintenant.
+            </p>
+
+            <a href="#" class="button">
+                🚀 Découvrir la formation
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Binance Booster™ — Tous droits réservés.
+
+    </footer>
+
 
 </body>
 </html>
