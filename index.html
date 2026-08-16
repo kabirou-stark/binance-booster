@@ -892,108 +892,6 @@
         }
 
         /* ==============================
-           MODALE DE PAIEMENT
-        ============================== */
-
-        .modal {
-            position: fixed;
-
-            inset: 0;
-
-            z-index: 9999;
-
-            display: none;
-
-            align-items: center;
-            justify-content: center;
-
-            padding: 20px;
-
-            background: rgba(0,0,0,0.85);
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-box {
-            position: relative;
-
-            width: 100%;
-            max-width: 500px;
-
-            padding: 45px 30px;
-
-            border: 3px solid var(--yellow);
-
-            border-radius: 24px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #1A1A1A,
-                    #080808
-                );
-
-            color: #ffffff;
-
-            text-align: center;
-        }
-
-        .close {
-            position: absolute;
-
-            top: 8px;
-            right: 18px;
-
-            border: none;
-
-            background: transparent;
-
-            color: #aaaaaa;
-
-            font-size: 32px;
-
-            cursor: pointer;
-        }
-
-        .modal-box h2 {
-            margin-bottom: 15px;
-
-            font-size: 28px;
-        }
-
-        .modal-old {
-            color: #777777;
-
-            text-decoration: line-through;
-
-            font-size: 18px;
-        }
-
-        .modal-price {
-            margin: 8px 0 20px;
-
-            font-size: 48px;
-
-            font-weight: 900;
-
-            color: var(--yellow-light);
-        }
-
-        .modal-box p {
-            margin-bottom: 25px;
-
-            color: #aaaaaa;
-
-            font-size: 15px;
-        }
-
-        .modal-box .btn {
-            width: 100%;
-        }
-
-        /* ==============================
            OFFRE FIXE EN BAS À GAUCHE
         ============================== */
 
@@ -1313,13 +1211,15 @@
 
     </div>
 
-    <button
-        class="btn"
-        onclick="openModal()">
+    <!-- LIEN DIRECT VERS LE PAIEMENT CHARIOW -->
+
+    <a
+        href="https://brojrjot.mychariow.com/prd_6djcsqfq/checkout"
+        class="btn">
 
         PROFITER DE L'OFFRE MAINTENANT
 
-    </button>
+    </a>
 
 </div>
 
@@ -1373,8 +1273,7 @@
 
 
         <!-- =====================================
-             NOUVELLE VIDÉO YOUTUBE
-             https://youtu.be/jtsEn7X16pc
+             VIDÉO YOUTUBE
         ====================================== -->
 
         <div class="main-video">
@@ -1748,13 +1647,15 @@
 
         </p>
 
-        <button
-            class="btn"
-            onclick="openModal()">
+        <!-- LIEN DIRECT VERS LE PAIEMENT CHARIOW -->
+
+        <a
+            href="https://brojrjot.mychariow.com/prd_6djcsqfq/checkout"
+            class="btn">
 
             PROFITER DE L'OFFRE MAINTENANT
 
-        </button>
+        </a>
 
     </div>
 
@@ -2103,69 +2004,12 @@
 
             Binance Booster™ est une formation éducative.
             Elle ne constitue pas un conseil financier personnalisé.
-            
 
         </div>
 
     </div>
 
 </section>
-
-
-<!-- =========================================
-     FENÊTRE DE PAIEMENT
-========================================= -->
-
-<div
-    class="modal"
-    id="offerModal"
-    onclick="closeOutside(event)">
-
-    <div class="modal-box">
-
-        <button
-            class="close"
-            onclick="closeModal()">
-
-            ×
-
-        </button>
-
-        <h2>
-            Profiter de l'offre maintenant
-        </h2>
-
-        <div class="modal-old">
-            107.789 FCFA
-        </div>
-
-        <div class="modal-price">
-            5.789 FCFA
-        </div>
-
-        <p>
-
-            Accède à Binance Booster™
-            et commence ton parcours de formation.
-
-        </p>
-
-        <!--
-        REMPLACE LE # PAR TON VRAI
-        LIEN DE PAIEMENT
-        -->
-
-        <a
-            href="#"
-            class="btn">
-
-            💳 PAYER 5.789 FCFA
-
-        </a>
-
-    </div>
-
-</div>
 
 
 <!-- =========================================
@@ -2181,63 +2025,6 @@
     © 2026 — Tous droits réservés.
 
 </footer>
-
-
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
-
-<script>
-
-    function openModal() {
-
-        document
-            .getElementById("offerModal")
-            .classList
-            .add("active");
-
-    }
-
-
-    function closeModal() {
-
-        document
-            .getElementById("offerModal")
-            .classList
-            .remove("active");
-
-    }
-
-
-    function closeOutside(event) {
-
-        if (
-            event.target.id === "offerModal"
-        ) {
-
-            closeModal();
-
-        }
-
-    }
-
-
-    document.addEventListener(
-        "keydown",
-        function(event) {
-
-            if (
-                event.key === "Escape"
-            ) {
-
-                closeModal();
-
-            }
-
-        }
-    );
-
-</script>
 
 </body>
 
